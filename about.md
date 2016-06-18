@@ -3,28 +3,14 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Hi! My name's Mohammad Saad, and this is my website/profile page/whatever.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I'm a student at the University of Illinois at Urbana-Champaign, graduating with my B.S. in Electrical Engineering later this year. I do a lot of stuff, but my focus is in image processing and computer vision. 
 
-There are currently two themes built on Poole:
+I founded TAG-DSP, which stands for Technical Advancement Group - Digital Signal Processing. I co-head it with Dario Aranguiz, a graduate student also at the University of Illinois. We learn and try to implement digital signal processing on cool little projects. We've worked (or are trying to work on) projects, such as a Follow Me Drone. 
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+I'm also a part of [Student Space Systems](http://www.studentspacesystems.org/), where I work on mainly control systems for our rocket. I was a part of Avionics, working on Stabilization and Control Systems, such as Apogee Detection, a Reaction Control System, and State Estimation.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+Finally, I'm also the [Muslim Student Association](http://www.msauiuc.org) webmaster. I just maintain the website.
 
-## Setup
 
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
