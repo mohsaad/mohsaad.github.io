@@ -15,4 +15,4 @@ I'm also a part of [Student Space Systems](http://www.studentspacesystems.org/),
 
 Finally, I'm also the [Muslim Student Association](http://www.msauiuc.org) webmaster. I just maintain the website.
 
-Feel free to check out my CV, or contact me!
+Feel free to check out my [CV](/Mohammad_Saad_2016_CV.pdf), or contact me!
