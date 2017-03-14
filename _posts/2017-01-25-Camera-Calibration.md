@@ -35,6 +35,6 @@ Typically we express the two vectors $$\bf{X}$$ and $$\bf{x}$$ in homogenous coo
 
 Homogenous coordinates allow us to express points at infinity in a coordinate system. In a projective plane, parallel lines are allowed to intersect, but at infinity.
 
-For any point $$(x,y)$$ on a Euclidean plane, we can express it's homogenous coordinate as $$(xZ, yZ, Z)$$ where Z is a non-zero real number. For example, a Cartesian coordinate $(3,4)$ can be expressed as $$(3,4,1)$$, and is equivalent to $$(6,8,2)$$ in homogenous coordinates. We can also convert back to the original Cartesian coordinates by dividing by the third coordinate, such that the original coordinate is $$(\frac{x}{Z}, \frac{y}{Z})$$.
+For any point $$(x,y)$$ on a Euclidean plane, we can express it's homogenous coordinate as $$(xZ, yZ, Z)$$ where Z is a non-zero real number. For example, a Cartesian coordinate $$(3,4)$$ can be expressed as $$(3,4,1)$$, and is equivalent to $$(6,8,2)$$ in homogenous coordinates. We can also convert back to the original Cartesian coordinates by dividing by the third coordinate, such that the original coordinate is $$(\frac{x}{Z}, \frac{y}{Z})$$.
 
 Now, say we have a line going to infinity. (Like all lines). We can parameterize the line as $$x = mt, y = nt$$, so that $$z = \frac{1}{t}$$ as $$t\rightarrow \infty$$, $$Z \rightarrow 0$$, so that a point at infinity is represented by $$Z = 0$$. This allows the homogenous coordinates of the point to become $$(m, n, 0)$$ and intersect with all other points at infinity.
