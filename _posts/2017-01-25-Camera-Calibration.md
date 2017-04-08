@@ -23,7 +23,7 @@ The simplest kind of camera model is the pinhole model. This assumes that light 
 
 Note that pinhole [cameras actually do exist](https://en.wikipedia.org/wiki/Pinhole_camera) and you can make one!
 
-Time for some math. Let the camera center $$\bf{C}$$ be the origin of our coordinate system (the camera frame) and a point $$\bf{X} = (X,Y,Z)^T$$ be a point in the world past the camera (but still in our camera coordinate system). Now let's define the image plane at $$z = f$$. This is the image we take of our world, with $$\bf{X}$$ inside it. Here's a quick picture of it, from Multiple View Geometry by Hartley/Zisserman (Ch. 6 pg. 154).
+Time for some math. Let the camera center $$\bf{C}$$ be the origin of our coordinate system (the camera frame) and a point $$\bf{X} = (X,Y,Z)^T$$ be a point in the world past the camera (but still in our camera coordinate system). Now let's define the image plane at $$z = f$$. This is the image we take of our world, with $\bf{X}$ inside it. Here's a quick picture of it, from Multiple View Geometry by Hartley/Zisserman (Ch. 6 pg. 154).
 
 ![Camera Pinhole Model](http://mohsaad.com/imgs/camera_pinhole_model.png)
 
