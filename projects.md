@@ -16,7 +16,7 @@ In my undergraduate (and spare) time, I've worked on a few things, mostly relate
 * [A Triangular Framework for Encoding Data in Images](http://mohsaad.com/assets/papers/ece-418-final.pdf)
 * [Space Invaders](http://mohsaad.com/assets/papers/ECE385FinalReport.pdf)
 * [Parkd](http://mohsaad.com/2016/07/15/Parkd/)
-* Santa's Little Helpers
+* [Santa's Little Helpers](https://devpost.com/software/santas-little-helper)
 * Cyberball
-* MHacks Music
+* [MHacks Music](https://devpost.com/software/mhacks-music)
 * [Geometric Art](http://mohsaad.com/2017/03/13/Geometric-Art/)
