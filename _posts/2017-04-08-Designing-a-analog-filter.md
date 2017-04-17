@@ -57,7 +57,7 @@ $$\frac{V_{in} - V_1}{R_1} = \frac{V_1 - V_2}{R_2} + \frac{V_1 - V_{out}}{\frac{
 
 Writing out the KCL at $$V_2$$, we see that:
 
-$$frac{V_1 - V_2}{R_2} = \frac{V_2}{\frac{1}{sC_1}}$$
+$$\frac{V_1 - V_2}{R_2} = \frac{V_2}{\frac{1}{sC_1}}$$
 
 One last thing to note is that $$V_{out}$$ is directly connected to the negative terminal
 of the op-amp. We assume an ideal op-amp model for our case, so that means the positive and negative
@@ -70,7 +70,7 @@ $$V_{out} = V_2$$
 A transfer function is defined as $$H(s) = \frac{V_{out}(s)}{V_{in}(s)}$$. So first, let's
 substitute in $$V_{out}$$ for $$V_2$$:
 
-$$frac{V_1 - V_{out}}{R_2} = \frac{V_{out}}{\frac{1}{sC_1}}$$
+$$\frac{V_1 - V_{out}}{R_2} = \frac{V_{out}}{\frac{1}{sC_1}}$$
 
 Solving for $$V_1$$, we find that
 
@@ -102,12 +102,15 @@ $$H(s) = \frac{V_{out}(s)}{V_{in}(s)} = \frac{1}{1 + \omega_cC_1(R_1 + R_2)s + \
 Knowing our Butterworth filter form, we can find which parameters equal which:
 
 $$A_0 = 1$$
+
 $$a_1 = \omega_cC_1(R_1 + R_2) = \sqrt{2}$$
+
 $$b_1 = \omega_c^2C_1C_2R_1R_2 = 1$$
 
 Now, we can solve for the appropriate $$R_1$$ and $$R_2$$, given $$C_1$$ and $$C_2$$.
 
 $$R_1R_2 = \frac{b_1}{\omega_c^2C_1C_2}$$
+
 $$(R_1 + R_2) = \frac{a_1}{\omega_c C_1}$$
 
 Solving for $$R_1$$, we see that:
@@ -176,7 +179,7 @@ We can clearly see the rolloff being less than 10%, and we hit a floor of exactl
 
 Finally, I took a small board and soldered everything to it. Here's how it looks:
 
-(To be done. Come back later!)
+![Imgur](http://i.imgur.com/lMPopKW.jpg)
 
 ### References
 

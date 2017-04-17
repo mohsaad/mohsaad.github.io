@@ -11,10 +11,10 @@ In my undergraduate (and spare) time, I've worked on a few things, mostly relate
 * [Acoustic-Driven Car Seat Localization](http://mohsaad.com/2016/06/20/Acoustic/)
 * Follow-Me Drone
 * Reaction Wheel Pendulum
-* A Critical Survey of Face Detection Frameworks
-* [Heart Rate Extraction using the Android System](http://mohsaad.com/2016/07/15/Triangle-Framework/)
-* [A Triangular Framework for Encoding Data in Images](http://mohsaad.com/2016/07/15/Triangle-Framework/)
-* Space Invaders
+* [A Critical Survey of Face Detection Frameworks](http://mohsaad.com/assets/papers/critical-survey-frameworks.pdf)
+* [Heart Rate Extraction using the Android System](http://mohsaad.com/assets/papers/ECE420FinalDesignReport.pdf)
+* [A Triangular Framework for Encoding Data in Images](http://mohsaad.com/assets/papers/ece-418-final.pdf)
+* [Space Invaders](http://mohsaad.com/assets/papers/ECE385FinalReport.pdf)
 * [Parkd](http://mohsaad.com/2016/07/15/Parkd/)
 * Santa's Little Helpers
 * Cyberball
