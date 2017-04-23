@@ -39,3 +39,14 @@ Here's some of the books I've read, mostly as a reminder to myself. An incomplet
 
 # Videos
 * [__Minecraft Interstate__](https://www.youtube.com/watch?v=asImTDkPWKA) by brt5470
+
+# Races
+
+I run a lot. Here's some of the races I've participated in (and their times):
+
+* 2016 Run for Syria 5K (22:43)
+* [2016 Allerton Trails 10k](http://www.allertonraces.com) (56:42.6)
+* [2016 Illinois Half Marathon](http://illinoismarathon.com) (2:02:50)
+* [2016 Hot Chocolate 15k](https://www.hotchocolate15k.com/chicago) (1:45:26)
+* [2017 Illinois 5K](http://illinoismarathon.com) (28:09)
+* [2017 Illinois Marathon Relay](http://illinoismarathon.com) (My leg: 57:16 + some change, overall time: 4:28:44)
