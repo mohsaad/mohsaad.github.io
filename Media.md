@@ -25,7 +25,7 @@ Here's some of the books I've read, mostly as a reminder to myself. An incomplet
 ## Modern Fiction
 * __The Bone Clocks__ by David Mitchell
 * __Cloud Atlas__ by David Mitchell
-* __Ghostwritten__ by David Mitchell
+* [__Ghostwritten__ by David Mitchell](http://mohsaad.com/2017/05/27/Ghostwritten-Connections/)
 * __And the Mountains Echoes__ by Khaled Hosseini
 
 ## Textbooks

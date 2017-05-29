@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Two ways to do the random streaming problem
+hidden: true
 ---
 
 An interview problem I had went something like this:
