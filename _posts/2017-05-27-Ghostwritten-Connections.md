@@ -1,6 +1,7 @@
 ---
 title: A network of connections in David Mitchell's Ghostwritten
-layout: post
+layout: page
+hidden: true
 ---
 
 Last semester, I sat in for a couple of weeks on a class called [Network Science: Dynamics and Flow](https://courses.engr.illinois.edu/ece498lv3/sp2017/)

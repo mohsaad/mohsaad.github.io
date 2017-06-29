@@ -5,6 +5,14 @@ title: Projects
 
 In my undergraduate (and spare) time, I've worked on a few things, mostly related to computer vision. I'll try to put in project pages for all of these hopefully soon enough.
 
+## 2017
+* [Map of Mosques Across America](http://mohsaad.com/2017/06/28/Masjid-Map/)
+
+## Paper Reviews
+* [End-to-End Learning for Self-Driving Cars](http://mohsaad.com/2017/06/18/End-To-End/)
+
+## Undergradute
+
 * GPU-Accelerated Convolutional Neural Network
 * Open Source OS
 * [Anomaly Detection Using Computer Vision](http://mohsaad.com/2016/07/02/Anomaly/)
