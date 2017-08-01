@@ -21,21 +21,26 @@ Here's some of the books I've read, mostly as a reminder to myself. An incomplet
 ## Psychology / Sociology
 * __Outliers__ by Malcolm Gladwell
 * __The Big Sort__ by Bill Bishop
+* __The Power of No__ by James Altucher
+* __Six Degrees: The Science of a Connected Age__ by Duncan Watts
 
 ## Modern Fiction
 * __The Bone Clocks__ by David Mitchell
 * __Cloud Atlas__ by David Mitchell
 * [__Ghostwritten__ by David Mitchell](http://mohsaad.com/2017/05/27/Ghostwritten-Connections/)
-* __And the Mountains Echoes__ by Khaled Hosseini
+* __And the Mountains Echoed__ by Khaled Hosseini
 
 ## Textbooks
 * __Multiple View Geometry__ by Hartley and Zimmerman
+* __Introduction to Machine Learning__ by Ethem Alpaydin
+* __Deep Learning__ by Ian Goodfellow, Yoshua Bengio, and Aaron Courville
 
 # Podcasts
 * __Revisionist History__ by Malcolm Gladwell
 * __FiveThirtyEight Politics__ by FiveThirtyEight
 * __Serial__ by NPR
 * __S-Town__ by NPR
+* __Freakonomics Radio__ by WBUR
 
 # Videos
 * [__Minecraft Interstate__](https://www.youtube.com/watch?v=asImTDkPWKA) by brt5470
