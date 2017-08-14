@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Paper Review - Towards Geometric Deep SLAM
+tags:
+- research
+- computer-vision
 ---
 
 Another paper was bought to my attention by one of my co-workers. Published by Magic Leap scientists, it attempt to develop a SLAM algorithm based on deep learning. While such algorithms have been done (or at least parts of them, see [1] and [2]), the authors simplify the problem down to extracting corners and estimating a homography between two images with detected corners. The paper can be found [here](https://arxiv.org/pdf/1707.07410.pdf).
