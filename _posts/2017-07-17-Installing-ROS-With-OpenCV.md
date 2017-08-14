@@ -18,19 +18,20 @@ Before you do anything, first, uninstall any binary versions of OpenCV from `apt
 ~~~~~~~~~
 mkdir ~/packages && cd ~/packages
 git clone https://github.com/opencv/opencv.git
+cd opencv
 git checkout 2.4.13
 ~~~~~~~~~
 
 {:start="2"}
-2. Build it with your options (for example, I usually build with CUDA) and install:
+2. Build it with your options (for example, I usually build with CUDA) and install. The last symbolic link is for the CUDART library so we can compile cuda programs.
 
 ~~~~~~~~~
-cd opencv
 mkdir -p build
 cd build
 cmake -DWITH_CUDA=ON ..
 make -j4
 sudo make install
+sudo ln -s /usr/local/cuda/lib64/libcudart.so /usr/lib/libopencv_dep_cudart.so
 ~~~~~~~~~
 
 {:start="3"}
