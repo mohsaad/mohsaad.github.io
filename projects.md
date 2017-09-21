@@ -12,6 +12,7 @@ In my undergraduate (and spare) time, I've worked on a few things, mostly relate
 * [End-to-End Learning for Self-Driving Cars](http://mohsaad.com/2017/06/18/End-To-End/)
 * [Towards Geometric Deep SLAM](http://mohsaad.com/2017/07/27/Paper-Review-Deep-SLAM/)
 * [LCDet&#58; Low-Complexity Fully-Convolutional Neural Networks for Object Detection in Embedded Systems](http://mohsaad.com/2017/08/22/LCDet/)
+* [Finding Tiny Faces](http://www.mohsaad.com/2017/09/19/Finding-Tiny-Faces/)
 
 ## Undergradute
 
