@@ -6,7 +6,7 @@ tags: computer-vision, research
 
 ![TinyFace](http://www.cmu.edu/news/stories/archives/2017/march/images/tinyfaces-centipede_853x480-min.jpg)
 
-I actually read this paper earlier in the summer, but it didn't really apply to any of the work I was doing until about now. This is an interesting paper out of Carengie Mellon's Robotics Institute that utilizes a new characterization of scale to detect very small objects - or in this case, faces. Hu et al. make the case that scale-invariance will inherently make mistakes, as the process for detecting an object 3px wide is much different than detecting one 300px wide - an assertion that is supported by our own human eye. We don't use the same technique when looking at something large when looking at something small - we have to squint our eyes and try to make out the smaller object. Similarly to that, Hu and Ramanan train specific detectors for different scales in order to boost the detection/classification accuracy. The paper can be found [here](https://arxiv.org/pdf/1612.04402v1.pdf).
+I actually read this paper earlier in the summer, but it didn't really apply to any of the work I was doing until about now. This is an interesting paper out of Carnegie Mellon's Robotics Institute that utilizes a new characterization of scale to detect very small objects - or in this case, faces. Hu et al. make the case that scale-invariance will inherently make mistakes, as the process for detecting an object 3px wide is much different than detecting one 300px wide - an assertion that is supported by our own human eye. We don't use the same technique when looking at something large when looking at something small - we have to squint our eyes and try to make out the smaller object. Similarly to that, Hu and Ramanan train specific detectors for different scales in order to boost the detection/classification accuracy. The paper can be found [here](https://arxiv.org/pdf/1612.04402v1.pdf).
 
 ### Introduction and Related Work
 
@@ -14,7 +14,7 @@ A lot of work has been done in using scale-normalized classifiers, where they lo
 
 ### Context vs resolution
 
-Context is important for finding small faces, but let's pause for a second and look at the inverse problem: how do we find large faces of a fixed size? To do that, the authors focus on searching for the best template of a fixed-size image, treating the detection as a binary heatmap prediciton problem. The authors use a ResNet [5] to extract features, looking at the outputs of each residual layer to represent multi-scale features.
+Context is important for finding small faces, but let's pause for a second and look at the inverse problem: how do we find large faces of a fixed size? To do that, the authors focus on searching for the best template of a fixed-size image, treating the detection as a binary heatmap prediction problem. The authors use a ResNet [5] to extract features, looking at the outputs of each residual layer to represent multi-scale features.
 
 One thing they noticed is that additional context usually helps, but not always. If we add more context to a small object, for exampl, it will hurt after a certain size (the authors say is 300x300). Using the "loose" RF (i.e. the template with a larger size than the target), on average, improves the detection rate of both large and small faces. This means that we can train specific detectors for different scales and take advantage of multi-task learning in order to perform face detection.
 
@@ -26,25 +26,25 @@ As a result of these findings, the authors decide to employ multi-task learning 
 
 ### Multi-Task Learning
 
-In short, multi-task learning involves learning how to do seperate actions while sharing information that may be useful in accomplishing all of these tasks. In this case, the separate actions are really the different scale detections, while sharing information across scales between each of the specific detectors.
+In short, multi-task learning involves learning how to do separate actions while sharing information that may be useful in accomplishing all of these tasks. In this case, the separate actions are really the different scale detections, while sharing information across scales between each of the specific detectors.
 
 ![Multi-Task Learning](https://lh5.googleusercontent.com/proxy/sO73QPC5gaMifWstSAwT2dhe9FCek7kXGuVq7H42ETL_QXL1xS3PSGR3Y7bRCbCDt3Gj-WPrEXzla0T4FDOR2g=w5000-h5000)
 
-The algorithm they propose is to train a bunch of templates of faces at different resolutions, then select the ones that do the best across all scales. To define a template they use $$t(h,w,\sigma)$$ which is used to detect objects of size $$(h / \sigma, w / \sigma)$$ where $$\sigma$$ is the resolution. For each target, they try to find an optimal resolution $$\sigma_i$$ which will maximize the detection performance of the template $$t_i(\sigma_ih_i, \sigma_iw_i,\sigma_i)$$. In other words, they try to find a template that maximizes the success rate over all resolutions. They train seperate multi-task models for each $$\sigma$$ and take the max to find the optimal resolution. One interesting thing they note is that you really only need 3 regimes. For large images ($$ > 140px$$), use 2x smaller resolution, for smaller images ($$ < 40px$$) use 2x larger resolution, and just use the same resolution for anything in between, where most objects fall.
+The algorithm they propose is to train a bunch of templates of faces at different resolutions, then select the ones that do the best across all scales. To define a template they use $$t(h,w,\sigma)$$ which is used to detect objects of size $$(h / \sigma, w / \sigma)$$ where $$\sigma$$ is the resolution. For each target, they try to find an optimal resolution $$\sigma_i$$ which will maximize the detection performance of the template $$t_i(\sigma_ih_i, \sigma_iw_i,\sigma_i)$$. In other words, they try to find a template that maximizes the success rate over all resolutions. They train separate multi-task models for each $$\sigma$$ and take the max to find the optimal resolution. One interesting thing they note is that you really only need 3 regimes. For large images ($$ > 140px$$), use 2x smaller resolution, for smaller images ($$ < 40px$$) use 2x larger resolution, and just use the same resolution for anything in between, where most objects fall.
 
 ### Architecture
 
-The detection pipeline for finding faces is split into a 3-level image pyramid, which includes both a 2x upsampling space (for small faces) and a 2x downsampling space. We then feed them into 3 separate CNNs, which extracts the hypercolumnal features (important for context) and then predict response maps of the corresponding templates, generated from the multi-task learning above. GIven those, we extract bounding boxes and then merge them back into a single image. For predicting the template response, they use both an A-type template (tuned for normal faces, 40-140px) and B-type template (tuned for <40px). The A-type is run on all 3 levels of the pyramid, while the B-type is only run on the 2x upsampled image, for detecting smaller faces. The CNNs were tested with ResNet-101, ResNet-50, and VGG-16, but performed the ebst with ResNet101.
+The detection pipeline for finding faces is split into a 3-level image pyramid, which includes both a 2x upsampling space (for small faces) and a 2x downsampling space. We then feed them into 3 separate CNNs, which extracts the hypercolumnal features (important for context) and then predict response maps of the corresponding templates, generated from the multi-task learning above. Given those, we extract bounding boxes and then merge them back into a single image. For predicting the template response, they use both an A-type template (tuned for normal faces, 40-140px) and B-type template (tuned for <40px). The A-type is run on all 3 levels of the pyramid, while the B-type is only run on the 2x upsampled image, for detecting smaller faces. The CNNs were tested with ResNet-101, ResNet-50, and VGG-16, but performed the best with ResNet101.
 
 ### Results
 
 ![Results](https://www.cs.cmu.edu/~peiyunh/tiny/scale_examples.png)
 
-From a visual inspection of the results, they look very primsiing. Even faces that I didn't think were possible were picked up by the detector.
+From a visual inspection of the results, they look very promising. Even faces that I didn't think were possible were picked up by the detector.
 
 The paper results say they have beaten prior approached by 17% on the hard set, while slightly outperforming the others on the Easy and Medium Set. It blows away any feature-based or non-Region Proposal Networks (which is what a lot of this work was based on), which is also good.
 
-I decided to give it a try myself, using an implemtation someone had written in MXNet (from [here](https://github.com/zzw1123/mxnet-finding-tiny-face)). However, it didn't exactly approach the results I saw in the paper, as can be seen below:
+I decided to give it a try myself, using an implementation someone had written in MXNet (from [here](https://github.com/zzw1123/mxnet-finding-tiny-face)). However, it didn't exactly approach the results I saw in the paper, as can be seen below:
 
 ![Test Image](https://i.imgur.com/fkcP9KE.jpg)
 
