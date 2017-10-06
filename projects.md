@@ -6,6 +6,7 @@ title: Projects
 In my undergraduate (and spare) time, I've worked on a few things, mostly related to computer vision. I'll try to put in project pages for all of these hopefully soon enough.
 
 ## 2017
+* [v4l2&#58; An Introduction](http://mohsaad.com/2017/10/04/V4L2/)
 * [Map of Mosques Across America](http://mohsaad.com/2017/06/28/Masjid-Map/)
 
 ## Paper Reviews
