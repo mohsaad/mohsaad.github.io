@@ -5,6 +5,16 @@ title: Gallery
 
 Some pictures I've taken.
 
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/149702727@N03/37278109321/in/datetaken/" title="The Golden Gate Bridge"><img src="https://farm5.staticflickr.com/4369/37278109321_a0c239e4f6_c.jpg" width="800" height="381" alt="The Golden Gate Bridge"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+The Golden Gate Bridge. San Francisco, CA, 9/16/2017.
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/149702727@N03/37248662702/in/datetaken/" title="Vortex"><img src="https://farm5.staticflickr.com/4455/37248662702_448710efd0_c.jpg" width="800" height="450" alt="Vortex"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+A natural vortex effect. Black Sands Beach, Marin, CA, 9/16/2017
+
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/149702727@N03/36568379764/in/datetaken/" title="Bonsai Rock"><img src="https://farm5.staticflickr.com/4456/36568379764_f877c8217f_c.jpg" width="800" height="500" alt="Bonsai Rock"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+Bonsai Rock. Lake Tahoe, Nevada, 9/15/2017
+
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/149702727@N03/33223016074/in/dateposted-public/" title="Double rainbow"><img src="https://c1.staticflickr.com/3/2898/33223016074_2be05fb9eb_b.jpg" width="1024" height="678" alt="Double rainbow"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 A double rainbow. Champaign, IL, 4/3/2017
 
