@@ -14,6 +14,12 @@ In my undergraduate (and spare) time, I've worked on a few things, mostly relate
 * [LCDet&#58; Low-Complexity Fully-Convolutional Neural Networks for Object Detection in Embedded Systems](http://mohsaad.com/2017/08/22/LCDet/)
 * [Towards Geometric Deep SLAM](http://mohsaad.com/2017/07/27/Paper-Review-Deep-SLAM/)
 * [End-to-End Learning for Self-Driving Cars](http://mohsaad.com/2017/06/18/End-To-End/)
+* [Ripple&#58; Communicating through Physical Vibration](http://mohsaad.com/2016/02/23/Paper-Review-Ripple/)
+* [Energy Consumption in Mobile Phones&#58; A Measurement Study and Implications for Network Applications](http://mohsaad.com/2016/02/21/Network-Energy-Apps/)
+* [Infrastructure Mobility&#58; A What-If Analysis](http://mohsaad.com/2016/02/09/Infrastructure-Mobility/)
+* [A Rate-Adaptive MAC Protocol for Multi-Hop Wireless Networks](http://mohsaad.com/2016/02/06/Paper-Review-Rate-Adaptive/)
+* [Using Directional Antennas for Medium Access Control in Ad Hoc Networks](http://mohsaad.com/2016/02/02/Directional-Antennas/)
+* [MACAW&#58; A Media Access Protocol for Wireless LANs](http://mohsaad.com/2016/02/01/MACAW/)
 
 ## Undergradute
 
