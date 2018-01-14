@@ -5,8 +5,9 @@ title: Numerical Algorithms
 
 Here's a list of numerical algorithms with links to their descriptions and implementations.
 
-* Gaussian Elimination
-* LU Factorization
+* [Forward / Backward Substitution]({{ site.baseurl }}courses/cs450/forward_backward_sub/)
+* LU Factorization / Gaussian Elimination
+* Gauss-Jordan Elimination
 * Sherman-Morrison
 * Gauss-Jordan
 * Cholesky Factorization
