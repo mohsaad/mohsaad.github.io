@@ -11,7 +11,7 @@ Here's a list of numerical algorithms with links to their descriptions and imple
 * Sherman-Morrison
 * Gauss-Jordan
 * Cholesky Factorization
-* QR Factorization
+* [QR Factorization](({{ site.baseurl }}courses/cs450/qr-factorization/))
 * Singular Value Decomposition
 * Power Iteration
 * Inverse Iteration

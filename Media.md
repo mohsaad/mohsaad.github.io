@@ -11,6 +11,7 @@ Here's some of the books I've read, mostly as a reminder to myself. An incomplet
 * __Invisible Man__ by Ralph Ellison
 * __Lord of the Flies__ by William Goulding
 * __Frankenstein__ by Mary Shelley
+* __Grendel__ by John Gardner
 
 ## Nonfiction
 * __The Big Short__ by Michael Lewis
@@ -28,6 +29,8 @@ Here's some of the books I've read, mostly as a reminder to myself. An incomplet
 * __The Bone Clocks__ by David Mitchell
 * __Cloud Atlas__ by David Mitchell
 * [__Ghostwritten__ by David Mitchell](http://mohsaad.com/2017/05/27/Ghostwritten-Connections/)
+* __number9dream__ by David Mitchell
+* __The Kite Runner__ by Khaled Hosseini
 * __And the Mountains Echoed__ by Khaled Hosseini
 
 ## Textbooks
@@ -55,3 +58,4 @@ I run a lot. Here's some of the races I've participated in (and their times):
 * [2016 Hot Chocolate 15k](https://www.hotchocolate15k.com/chicago) (1:45:26)
 * [2017 Illinois 5K](http://illinoismarathon.com) (28:09)
 * [2017 Illinois Marathon Relay](http://illinoismarathon.com) (My leg: 57:16 + some change, overall time: 4:28:44)
+* [2017 Glen Ellyn Turkey Trot](https://gepark.org/events/turkey-trot/) (55:43) 
