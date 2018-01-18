@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Muslims in ECE&#58; A Network Study
 hidden: true
 ---

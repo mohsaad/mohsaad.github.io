@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Two ways to do the random streaming problem
 hidden: true
 ---
