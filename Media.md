@@ -19,11 +19,12 @@ Here's some of the books I've read, mostly as a reminder to myself. An incomplet
 * __Ghost in the Shell__ by Kevin Mitnick
 * __Too Big to Fail__ by Andrew Ross Sorkin
 
-## Psychology / Sociology
+## Psychology / Sociology / "Cool"
 * __Outliers__ by Malcolm Gladwell
 * __The Big Sort__ by Bill Bishop
 * __The Power of No__ by James Altucher
 * __Six Degrees: The Science of a Connected Age__ by Duncan Watts
+* __Critical Mass: How One Thing Leads to Another__ by Phillip Ball
 
 ## Modern Fiction
 * __The Bone Clocks__ by David Mitchell
@@ -58,4 +59,4 @@ I run a lot. Here's some of the races I've participated in (and their times):
 * [2016 Hot Chocolate 15k](https://www.hotchocolate15k.com/chicago) (1:45:26)
 * [2017 Illinois 5K](http://illinoismarathon.com) (28:09)
 * [2017 Illinois Marathon Relay](http://illinoismarathon.com) (My leg: 57:16 + some change, overall time: 4:28:44)
-* [2017 Glen Ellyn Turkey Trot](https://gepark.org/events/turkey-trot/) (55:43) 
+* [2017 Glen Ellyn Turkey Trot](https://gepark.org/events/turkey-trot/) (55:43)
