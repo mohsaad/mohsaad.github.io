@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Quick Slack Bot for saying hello on entering a channel
+title: A quick SlackBot for saying hello on entering a channel
 ---
 
 A group I joined on Slack was starting to write their own chatbot in order to automate some processes that happen manually whenever someone joins. Things like welcoming them to the channel and what not. I was curious, so I decided to try and write my own to see if I could.
