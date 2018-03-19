@@ -14,6 +14,7 @@ In my undergraduate (and spare) time, I've worked on a few things, mostly relate
 * [Map of Mosques Across America](http://mohsaad.com/2017/06/28/Masjid-Map/)
 
 ## Paper Reviews
+* [CNN-SLAM: Real-time dense monocular SLAM with learned depth prediction]({{ site.baseurl}}2018/03/18/CNN-SLAM/)
 * [Deeper Depth Prediction using Fully-Convolutional Residual Networks]({{ site.baseurl }}2018/03/10/Deeper-Depth-Prediction/)
 * [Review of Single Image Depth Prediction Papers]({{ site.baseurl }}2018/03/07/Depth-Prediction-Single-Image)
 * [Finding Tiny Faces](http://www.mohsaad.com/2017/09/19/Finding-Tiny-Faces/)
