@@ -29,7 +29,8 @@ In my undergraduate (and spare) time, I've worked on a few things, mostly relate
 * [MACAW&#58; A Media Access Protocol for Wireless LANs](http://mohsaad.com/2016/02/01/MACAW/)
 
 ## Undergradute
-
+* [Illinois Autonomous Underwater Vehicle 2017](http://mohsaad.com/misc/robosub2017.pdf)
+* [Guided Filters for Depth Image Enhancement](http://mohsaad.com/misc/Senior_Thesis_Mohammad_Saad_saad4.pdf) ([Presentation](https://1drv.ms/p/s!AvdnWeCd7MgQ1GyRv5jfD3rp0_i5))
 * GPU-Accelerated Convolutional Neural Network
 * Open Source OS
 * [Anomaly Detection Using Computer Vision](http://mohsaad.com/2016/07/02/Anomaly/)
