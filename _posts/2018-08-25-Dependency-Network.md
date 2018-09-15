@@ -11,7 +11,7 @@ To do this, I used python to scrape through every file in a specific directory a
 
 One interesting thing to note is that I'm pretty sure every compiler uses this internally - building a graph and then optimizing over variables inside the graph.
 
-As an example of what this looks like, here's a visualization of the dependency network of [LSD-SLAM](https://github.com/mohsaad/dependency-visualizer):
+As an example of what this looks like, here's a visualization of the dependency network of [LSD-SLAM](https://github.com/tum-vision/lsd_slam):
 
 ![Imgur](https://i.imgur.com/hgB9xOe.png)
 
