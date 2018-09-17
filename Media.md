@@ -59,4 +59,5 @@ I run a lot. Here's some of the races I've participated in (and their times):
 * [2016 Hot Chocolate 15k](https://www.hotchocolate15k.com/chicago) (1:45:26)
 * [2017 Illinois 5K](http://illinoismarathon.com) (28:09)
 * [2017 Illinois Marathon Relay](http://illinoismarathon.com) (My leg: 57:16 + some change, overall time: 4:28:44)
-* [2017 Glen Ellyn Turkey Trot](https://gepark.org/events/turkey-trot/) (55:43)
+* [2017 Glen Ellyn Turkey Trot](https://gepark.org/events/turkey-trot/) (55:4)
+* [2018 Bridge To Bridge 5k](https://bridgetobridge.com/) (27:30)
