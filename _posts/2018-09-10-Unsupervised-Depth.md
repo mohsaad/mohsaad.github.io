@@ -9,15 +9,15 @@ For a little bit of context, most depth maps pre-deep learning were done by ster
 
 ## Related Work
 
-Most previous depth estimation via deep learning methods were done by learning a depth map from a single image, combining other features or using an advanced loss function to compensate for depth anomalies. However, utilizing other features in addition to learning the depth means you will have to tune those features to a dataset, and they may not be transferable to other environments. (This usually goes for all feature-based methods). The issue with supervised methods for single image depth prediction is that they require tons of training data and time to get right, especially since true depth is hard to obtain and sometimes wholly inaccurate. 
+Most previous depth estimation via deep learning methods were done by learning a depth map from a single image, combining other features or using an advanced loss function to compensate for depth anomalies. However, utilizing other features in addition to learning the depth means you will have to tune those features to a dataset, and they may not be transferable to other environments. (This usually goes for all feature-based methods). The issue with supervised methods for single image depth prediction is that they require tons of training data and time to get right, especially since true depth is hard to obtain and sometimes wholly inaccurate.
 
-The closest approaches to Goddard et al.'s work is an algorithm called [DeepStereo]() which aims to reconstruct an image based on poses of images close to it. However, this requires the entire dataset to be available at test time, which is not ideal for us. Other approaches are fairly similar, in that they generate a left or right view from their image to generate a stereo pair, which we can then use for stereo matching. One such approach is called Deep3D, which uses an image reconstruction loss to produce a distribution over all possible disparities in the left image. The issue with this is that it does not scale well with increasing disparities, and becomes increasingly memory-inefficient. Garg et al. use somthing very similar to the Goddard et al., but their training loss is very tricky to optimize. 
+The closest approaches to Goddard et al.'s work is an algorithm called [DeepStereo]() which aims to reconstruct an image based on poses of images close to it. However, this requires the entire dataset to be available at test time, which is not ideal for us. Other approaches are fairly similar, in that they generate a left or right view from their image to generate a stereo pair, which we can then use for stereo matching. One such approach is called Deep3D, which uses an image reconstruction loss to produce a distribution over all possible disparities in the left image. The issue with this is that it does not scale well with increasing disparities, and becomes increasingly memory-inefficient. Garg et al. use somthing very similar to the Goddard et al., but their training loss is very tricky to optimize.
 
 ## Methodology
 
 Normally most depth prediction problems are set up as supervised learning problems, meaning that they're just normal deep learning. You set up an architecture and your training loss, and just feed in data until it dies. However, the authors use a slightly different approach using two images. At training time, instead of having a color-depth pair or a color-lidar pair, we instead have a left-right image pair $$I$$ and $$I'$$. The idea is to set up a loss that that can reconstruct the left or right image while still being consistent with each other.
 
-The network itself is an encoder-decoder network with several skip connections to ensure information flow 
+The network itself is an encoder-decoder network with several skip connections to ensure information flow
 ### Loss Function
 
 The training loss is split into three portions:
@@ -61,13 +61,28 @@ This term penalizes any difference in disparity between the left image and the r
 
 ### Training Parameters
 
-The authors trained in Torch on 2x Titan X GPUs on 30k images (much less than Laina et al) for 50 epochs. The network performs inference at around 20 fps, which is almost real time!
+The authors trained in Torch on 2x Titan X GPUs on 30k images (much less than Laina et al) for 50 epochs. The network performs inference at around 20 fps, which is almost real time! The original training time took 50 epochs, with a batch size of 8 images/batch.
 
-The output disparities were constrained between 0 and $d_max$ using a sigmoid function, where $d_max = 0.3 \times w_{image}$$. Because the network is trained at multiple scales, this introduces an error where the disparity of neighboring 
+The output disparities were constrained between 0 and $d_max$ using a sigmoid function, where $d_max = 0.3 \times w_{image}$$. The authors also used exponential linear units instead of rectified linear units, because the ReLUs tended to prematurely fix the predicted disparities at the intermediate scale to a fixed value, which prevented the network from improving. The authors replaced the deconvolution with nearest neighbor upsamping with additional convolutions.
+
+Data augmentation mainly consisted of image flipping (50% chance), sampling color augmentations involving gamma, brightness, and each color channel.
+
+The network layers can be seen in this table:
+
+![Architecture](mono_depth_arch.png)
 
 ## Results
 
-So the results look pretty neat for a method that is very different from most depth prediction algorithms. For example, a generated stereo pair can be seen below:
+So the results look pretty neat for a method that is very different from most depth prediction algorithms. For example, an input image versus it's estimated depth map.
 
-The corresponding disparity map:
+![results](results.png)
 
+One really interesting thing about this paper is how well it generalizes to other datasets. The authors tried a model trained on KITTI on CityScapes, with comparable performance. Some screenshots can be found below:
+
+![depth_transfer](transfer_depth.png)
+
+Artifacts still do occur, especially at occlusion boundaries that are visible in both images. Another issue is that you can't really use single-view datasets for training, which reduces the amount of in-flow data (but considering the number of stereo datasets, this isn't that huge of an issue). Specular and transparent surfaces will also cause bad data readings, as the reconstruction cannot handle them.
+
+## Future Work
+
+There were a couple papers on CVPR 2018 approaching this, but I think this is pretty close to state-of-the-art even 1 year later. the fact that it's extensible, works in near-real-time, and doesn't require expensive mono depth datasets is enough to put it near the top. However, some things like temporal consistency and sparse input could help improve the algorithm, as well as a pipeline for semantic segmentation could be useful.
