@@ -3,6 +3,8 @@ layout: post
 title: Paper Review&#58; Automatic Targetless Extrinsic Calibration of a 3D Lidar and Camera by Maximizing Mutual Information
 ---
 
+$$\DeclareMathOperator*{\argmax}{arg\,max}$$
+
 Turning towards some robotics algorithms for a bit, we're coming across a problem that is sorely needed for almost every self-driving car - the issue of calibration. Today we'll be focusing on camera-LIDAR calibration, which is essential if you want to utilize multiple sources of information for your car. Usually, these kinds of approaches require a target to work well, and is usually pretty easy. [1](https://www.ri.cmu.edu/pub_files/2012/10/alismail_3dimpvt_2012.pdf). However, it's quite easy to bump the camera, or otherwise change the camera such that it needs a recalibration. For a car especially, this can happen quite often with wind or what not. A targetless calibration is what is ideally needed for this, as then you would not need to drive into a garage somewhere to re-calibrate.
 
 This paper by Pandey et al. allows for that, by creating a system in which the car just needs to drive around without any specific targets. Ideally, one can just drive around and collect a bunch of data, then run this procedure to re-check the calibrations. The way this method works is by taking advantage of mutual information in the Lidar frame and the camera frame. The paper can be found [here](http://robots.engin.umich.edu/publications/gpandey-2012a.pdf).
@@ -23,7 +25,7 @@ $$p(X,Y) = \frac{1}{n} \sum_{i=1}^n K_{\Omega} (\begin{bmatrix}X\\Y\end{bmatrix}
 
 Here $$K$$ is a symmetric kernel, while $$\Omega$$ is the smoothing factor of the kernel. We can visualize the effect of the kernel with the following image:
 
-//TODO: place image of intensitie
+![Imgur](https://i.imgur.com/tXxdIQr.png)
 
 Once we have our joint probability distribution, all we need is to optimize for the mutual information. In this case, we define mutual information as the overlap between entropies of two variables:
 
@@ -47,7 +49,7 @@ The maxima is the rotation and translation parameters that maximize this objecti
 
 The authors use Barzilai-Borwein steepest gradient ascent to find the $$\Theta$$ that maximizes the above equation. Given the gradient of the cost function $$\hat{\Theta}$$, we can write the gradient as:
 
-$$G = \delta MI(X,Y; \Theta)$$
+$$G = \nabla MI(X,Y; \Theta)$$
 
 and one iteration as
 
@@ -57,7 +59,9 @@ Here, $$\gamma_k$$ represents the adaptive step size of the iteration, which is 
 
 $$\gamma_k = \frac{s_k^T s_k}{s_k^Tg_k}, s_k = \Theta_k - \Theta_{k-1}, g_k = G_k - G_{k-1}$$
 
-Since this is convex, we see that this will converge after a few iterations depending on the number of scans.
+Since this is convex, we see that this will converge after a few iterations depending on the number of scans. An image of the cost surface can be seen below:
+
+![Imgur](https://i.imgur.com/xWTMq33.png)
 
 ## Results
 
