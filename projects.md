@@ -6,7 +6,9 @@ title: Projects
 In my undergraduate (and spare) time, I've worked on a few things, mostly related to computer vision. I'll try to put in project pages for all of these hopefully soon enough.
 
 ## 2018
+* ["Budget" PC Build]({{ site.baseurl }}2018/11/12/Budget-PC/)
 * [Deeper Depth Prediction]({{ site.baseurl }}2018/03/10/Deeper-Depth-Prediction/)
+* [Review of Single Image Depth Prediction Papers]({{ site.baseurl }}2018/03/07/Depth-Prediction-Single-Image)
 
 ## 2017
 * [Data-Mining your Facebook]({{ site.baseurl }}2017/12/19/Data-Mining-Facebook/)
@@ -14,9 +16,10 @@ In my undergraduate (and spare) time, I've worked on a few things, mostly relate
 * [Map of Mosques Across America](http://mohsaad.com/2017/06/28/Masjid-Map/)
 
 ## Paper Reviews
+* [Automatic Targetless Extrinsic Calibration of a 3D Lidar and Camera by Maximizing Mutual Information]({{ site.baseurl}}2018/10/13/Mutual-Information)
+* [Unsupervised Monocular Depth Prediction with Left-Right Consistency]({{ site.baseurl}}2018/09/10/Unsupervised-Depth)
 * [CNN-SLAM: Real-time dense monocular SLAM with learned depth prediction]({{ site.baseurl}}2018/03/18/CNN-SLAM/)
 * [Deeper Depth Prediction using Fully-Convolutional Residual Networks]({{ site.baseurl }}2018/03/10/Deeper-Depth-Prediction/)
-* [Review of Single Image Depth Prediction Papers]({{ site.baseurl }}2018/03/07/Depth-Prediction-Single-Image)
 * [Finding Tiny Faces](http://www.mohsaad.com/2017/09/19/Finding-Tiny-Faces/)
 * [LCDet&#58; Low-Complexity Fully-Convolutional Neural Networks for Object Detection in Embedded Systems](http://mohsaad.com/2017/08/22/LCDet/)
 * [Towards Geometric Deep SLAM](http://mohsaad.com/2017/07/27/Paper-Review-Deep-SLAM/)
