@@ -5,6 +5,9 @@ title: Projects
 
 In my undergraduate (and spare) time, I've worked on a few things, mostly related to computer vision. I'll try to put in project pages for all of these hopefully soon enough.
 
+## 2019
+* [Clear Sky Charts]({{ site.baseurl }}2019/04/10/Clear-Sky/)
+
 ## 2018
 * ["Budget" PC Build]({{ site.baseurl }}2018/11/12/Budget-PC/)
 * [Deeper Depth Prediction]({{ site.baseurl }}2018/03/10/Deeper-Depth-Prediction/)
