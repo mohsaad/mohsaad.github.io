@@ -5,17 +5,16 @@ body {
     font-size: 15px;
     line-height: 21px;
     color: rgb(48, 48, 48);
-    border-top: 5px solid #27a822;
-    border-bottom: 5px solid #27A822;
+    border-top: 5px solid #0099ee;
+    border-bottom: 5px solid #0099ee;
+}
+
+.underline {
+  border-bottom: 2px solid #0099ee;
 }
 
 .container {
     margin-top: 50px;
-}
-
-hr.title {
-    border: 5px solid;
-    color: #27A822;
 }
 
 a {
@@ -28,7 +27,7 @@ a:visited {
 }
 
 a:hover, a:focus {
-    color: #27A822;
+    color: #0099ee;
 }
 
 p, address {
@@ -45,7 +44,7 @@ p, address {
 }
 
 header > h1, section > h1 {
-    color: #27A822;
+    color: #0099ee;
 }
 
 header > h1 {
