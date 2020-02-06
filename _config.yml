@@ -1,32 +1,26 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
+highlighter: rouge
+markdown: kramdown
+rdiscount:
+  extensions: [smart]
+permalink: :title.html
+port: 4000
+safe: true
+url: http://jekyller.github.io/vitae
+author: Fábio Madeira
 
-# Permalinks
-permalink:        pretty
-# relative_permalinks: true
+# edit this section with your information
+# jekyller.github.io - all contents run on /vitae/
+# for a normal use at the base of the server change it to "/"
+baseurl:
+title: Mohammad Saad's Resume
+name: Mohammad Saad
+email: christurner@me.com
+email_full: mailto:youremail@me.com
+website: https://mohsaad.com
+website_full: https://mohsaad.com
+github: mohsaad
+twitter: mohsaad230
+linkedin: mohsaad
 
-# Setup
-title:            Mohammad Saad
-#tagline:
-# description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://mohsaad.com
-baseurl:          /
-
-real_url:         http://www.mohsaad.com
-
-author:
-  name:           'Mohammad Saad'
-  url:            https://twitter.com/mohsaad230
-
-paginate:         5
-
-# Custom vars
-# version:          2.1.0
-
-github:
-  repo:           https://github.com/mohsaad
-
-gems: [jekyll-paginate]
-
-exclude: [drafts]
+# needed for travis-ci build
+exclude: [vendor, _old]

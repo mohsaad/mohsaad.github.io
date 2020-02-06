@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.name }}'s Résumé">
+    <meta name="author" content="{{ site.name }} @{{ site.twitter }}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}static/css/base.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}static/css/skeleton.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}static/css/layout.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="{{ site.baseurl }}static/img/favicon.ico">
+    <!-- <link rel="apple-touch-icon" href="static/img/me-icon-57.png"> -->
+    <!-- <link rel="apple-touch-icon" sizes="72x72" href="static/img/me-icon-72.png"> -->
+    <!-- <link rel="apple-touch-icon" sizes="114x114" href="static/img/me-icon-114.png"> -->
+</head>
+<body>
+<div class="container">
+  <div class = "row" align = "center">
+    <div class="three columns">
+        <img src="{{ site.baseurl }}static/img/profile.png" class="me">
+    </div>
+    <header class = "ten columns">
+        <h1>{{ site.name }}</h1>
+        <p>
+        Software engineer with several years of experience in autonomous vehicle and robotics
+        development.
+        </p>
+    </header>
+    <div class = "three columns" align="right">
+        <p>
+            <a href="{{ site.website_full }}">mohsaad.com</a><br/>
+            <a href="https://github.com/{{ site.github }}">Github <i class="fa fa-github"></i></a> <br />
+            <a href="https://twitter.com/{{ site.twitter }}">Twitter <i class="fa fa-twitter"></i></a><br />
+            <a href="https://linkedin.com/in/{{ site.linkedin }}">LinkedIn <i class="fa fa-linkedin"></i></a><br />
+        </p>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="sixteen columns">
+        {{ content }}
+    <footer class="sixteen columns" align="center">
+        <p>© All rights reserved. Powered by <a href="http://jekyllrb.com/">Jekyll</a> and
+            <a href="https://www.github.com/jekyller/vitae">vitae</a> with ♥</p>
+    </footer>
+    </div>
+  </div>
+</div>
+</body>
+</html>
