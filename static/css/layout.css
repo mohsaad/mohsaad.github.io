@@ -43,6 +43,12 @@ p, address {
     margin-bottom: 20px;
 }
 
+.display {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+}
+
 header > h1, section > h1 {
     color: #0099ee;
 }
