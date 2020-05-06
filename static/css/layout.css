@@ -75,10 +75,11 @@ section > h1 {
     font-size: 140%;
     line-height: 120%;
     text-transform: uppercase;
+    margin-bottom: 0px;
 }
 
 article {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 article > header > h1 {
