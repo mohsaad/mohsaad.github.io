@@ -50,7 +50,7 @@ layout: default
   <div class="list-pagination">
     <span class="list-pagination-previous">
       {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.blog_url }}" class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.url }}" class="previous">
           &#xE000; previous
         </a>
       {% else %}
@@ -60,7 +60,7 @@ layout: default
 
     <span class="list-pagination-next">
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.blog_url }}" class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.url }}" class="next">
           next &#xE001;
         </a>
       {% else %}
