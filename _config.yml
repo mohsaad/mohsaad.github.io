@@ -6,7 +6,7 @@ rdiscount:
   extensions: [smart]
 permalink: :title.html
 port: 4000
-safe: true
+safe: false
 
 title: Mohammad Saad's Resume
 name: Mohammad Saad
@@ -23,20 +23,21 @@ linkedin: mohsaad
 baseurl: "/"
 
 # Gems
-gems: [jekyll-paginate]
+gems: [jekyll-paginate-v2]
 
 # Used for compatibility
-plugins_dir: [jekyll-paginate]
+plugins_dir: [jekyll-paginate-v2]
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:           America/Los_Angeles
 permalink:          /blog/:year-:month-:day/:title/
 
-# Pagination
-paginate:           5
-paginate_path:      /blog/page:num/
-
-
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: /page:num/
+  title: :year-:month-:day/:title/
+  sort_reverse: true
 
 ######################################
 ### Blog details
@@ -72,7 +73,6 @@ nav:
     url:            "/quotes"
   - name:           "Resume"
     url:            "/../"
-
 
 # needed for travis-ci build
 exclude: [vendor, _old]

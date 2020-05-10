@@ -1,5 +1,7 @@
 ---
 layout: default
+pagination:
+  enabled: true
 ---
 
 <header class="header">
@@ -19,16 +21,15 @@ layout: default
 
 <div class="list">
 {% if site.posts.size == 0 %}
-  <h2>No post found</h2>
 {% else %}
-<!-- This loops through the paginated posts -->
+<!--[> This loops through the paginated posts <]-->
 {% for post in paginator.posts %}
   {% if post.hidden != true %}
   <div class="list-post">
       {% if post.link %}
       <a href="{{ post.link }}">
       {% else %}
-      <a href="{{ post.url | prepend: site.blog_url }}">
+      <a href="{{ post.url | prepend: site.url }}">
       {% endif %}
       <div class="list-post-date">
         <time>{{ post.date | date_to_string }}</time>
@@ -42,11 +43,12 @@ layout: default
       </div>
       {% endif %}
     </a>
-
   </div>
+  {% else %}
+  test
   {% endif %}
 {% endfor %}
-  <!-- Pagination links -->
+  <!--[> Pagination links <]-->
   <div class="list-pagination">
     <span class="list-pagination-previous">
       {% if paginator.previous_page %}
@@ -54,7 +56,6 @@ layout: default
           &#xE000; previous
         </a>
       {% else %}
-
       {% endif %}
     </span>
 
@@ -64,7 +65,6 @@ layout: default
           next &#xE001;
         </a>
       {% else %}
-
       {% endif %}
     </span>
 
