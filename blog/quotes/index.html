@@ -1,0 +1,16 @@
+---
+layout: page
+title: Quotes
+---
+
+Some of my favorite quotes, from religion to politics and life.
+
+<br />
+<br />
+<div class="container">
+  {% for entry in site.data.quotes %}
+  <ul class = "readng-list">
+    <li>"{{ entry.quote}}"{% if entry.author %} - {{entry.author}}{% endif%}{% if entry.source %}, <i>{{ entry.source }}</i>{% endif %}
+  </ul>
+  {% endfor %}
+</div>
