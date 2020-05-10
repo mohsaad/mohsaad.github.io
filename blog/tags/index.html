@@ -42,7 +42,7 @@ permalink: /blog/tags/
         {% if post.link %}
         <a href="{{ post.link }}">
         {% else %}
-        <a href="{{ post.url | prepend: site.baseurl }}">
+        <a href="{{ post.url | prepend: site.url }}">
         {% endif %}  
           <span class="tag-post-title">{{ post.title }}</span>
         </a>
