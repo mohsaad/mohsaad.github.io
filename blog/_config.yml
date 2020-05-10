@@ -1,0 +1,96 @@
+# # # # # # # # # # # # #
+#   K i k o - p l u s   #
+# # # # # # # # # # # # #
+
+# Basic
+name:               "mohsaad"
+
+author:
+  #  facebook:         your-id
+  #   youtubeUser:      your-id
+  #  youtubeChannel:   your-id
+  #  twitter:          your-id
+  github:           mohsaad
+  #  stackoverflow:    your-id
+  #  quora:            your-id
+  linkedin:         mohsaad
+  #  pinterest:        your-id
+  #  googlePlus:       your-id
+  instagram:        mohsaad023
+  #  reddit:           your-id
+  #  medium:           your-id
+  #  tumblr:           your-id
+  #  email:            your-id@your-email.com
+
+copyright:
+  year:             2020
+  name:             Mohammad Saad
+
+# Google-analytics
+google-analytics:
+  id:               ""
+
+# Disqus
+disqus:
+  id:               "mohsaad23"
+
+# URL
+url:                "/"
+baseurl:            ""
+
+# Gems
+gems: [jekyll-paginate]
+
+# Used for compatibility
+plugins_dir: [jekyll-paginate]
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:           America/Los_Angeles
+permalink:          /:year-:month-:day/:title/
+
+# Pagination
+paginate:           5
+paginate_path:      /page:num/
+
+# Markdown
+markdown:           kramdown
+kramdown:
+  input:            GFM
+
+# Allow future posts
+future: true
+
+# Navigation
+nav:
+  - name:           "Archive"
+    url:            "/archive"
+  - name:           "Tags"
+    url:            "/tags"
+  - name:           "Reading list"
+    url:            "/reading"
+  - name:           "Quotes"
+    url:            "/quotes"
+  - name:           "Resume"
+    url:            "https://mohsaad.com/"
+
+# Sass
+sass:
+  sass_dir:         _sass
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
+exclude:            [vendor]

@@ -5,15 +5,10 @@ rdiscount:
 permalink: :title.html
 port: 4000
 safe: true
-url: http://jekyller.github.io/vitae
-author: Fábio Madeira
 
-# edit this section with your information
-# jekyller.github.io - all contents run on /vitae/
-# for a normal use at the base of the server change it to "/"
-baseurl:
 title: Mohammad Saad's Resume
 name: Mohammad Saad
+nickname: mohsaad
 email: christurner@me.com
 email_full: mailto:youremail@me.com
 website: https://mohsaad.com
@@ -21,6 +16,48 @@ website_full: https://mohsaad.com
 github: mohsaad
 twitter: mohsaad230
 linkedin: mohsaad
+
+
+baseurl: "/"
+
+
+
+
+######################################
+### Blog details
+######################################
+blog_url: "/blog"
+
+author:
+  #  facebook:         your-id
+  #   youtubeUser:      your-id
+  #  youtubeChannel:   your-id
+  #  twitter:          your-id
+  github:           mohsaad
+  #  stackoverflow:    your-id
+  #  quora:            your-id
+  linkedin:         mohsaad
+  #  pinterest:        your-id
+  #  googlePlus:       your-id
+  instagram:        mohsaad023
+  #  reddit:           your-id
+  #  medium:           your-id
+  #  tumblr:           your-id
+  #  email:            your-id@your-email.com
+
+# Navigation
+nav:
+  - name:           "Archive"
+    url:            "/archive"
+  - name:           "Tags"
+    url:            "/tags"
+  - name:           "Reading list"
+    url:            "/reading"
+  - name:           "Quotes"
+    url:            "/quotes"
+  - name:           "Resume"
+    url:            "/../"
+
 
 # needed for travis-ci build
 exclude: [vendor, _old]
