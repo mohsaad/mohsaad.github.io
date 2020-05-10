@@ -28,13 +28,6 @@ gems: [jekyll-paginate]
 # Used for compatibility
 plugins_dir: [jekyll-paginate]
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:           America/Los_Angeles
-permalink:          /blog/:year-:month-:day/:title/
-
-# Pagination
-paginate:           5
-paginate_path:      /blog/page:num/
 
 ######################################
 ### Blog details
@@ -58,6 +51,13 @@ author:
   #  tumblr:           your-id
   #  email:            your-id@your-email.com
 
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:           America/Los_Angeles
+permalink:          /blog/:year-:month-:day/:title/
+
+# Pagination
+paginate:           5
+paginate_path:      /blog/page:num/
 # Navigation
 nav:
   - name:           "Archive"
@@ -70,6 +70,18 @@ nav:
     url:            "/quotes"
   - name:           "Resume"
     url:            "/../"
+
+copyright:
+  year:             2020
+  name:             Mohammad Saad
+
+# Google-analytics
+google-analytics:
+  id:               ""
+
+# Disqus
+disqus:
+  id:               "mohsaad23"
 
 # needed for travis-ci build
 exclude: [vendor, _old]
