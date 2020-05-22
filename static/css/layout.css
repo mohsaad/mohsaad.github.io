@@ -161,6 +161,12 @@ em {
     }
 }
 
+@media screen and (max-width: 767px) {
+  div {
+    text-align: center;
+  }
+}
+
 footer p {
     margin-bottom: 10px;
     font-size: 10pt;
