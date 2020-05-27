@@ -23,6 +23,7 @@ baseurl: "/"
 gems: [jekyll-paginate]
 
 # Used for compatibility
+plugins: [jekyll-paginate]
 plugins_dir: [jekyll-paginate]
 
 
