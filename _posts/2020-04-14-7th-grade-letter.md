@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A letter from my 7th grade self
-tags: [personal]
+tags: []
 description: A reflection on a letter that I wrote in the 7th grade
 hidden: true
 ---
