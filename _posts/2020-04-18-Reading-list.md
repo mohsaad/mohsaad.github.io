@@ -2,7 +2,7 @@
 layout: post
 title: Creating a reading list and quotes page
 description: A tutorial on Jekyll and parsing data files
-tags: [blog]
+tags: [blog, jekyll]
 ---
 
 You may have noticed the reading list and quotes section at the top. I was inspired by a few others to build a reading list and keep track of books.
