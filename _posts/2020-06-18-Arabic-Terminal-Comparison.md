@@ -19,31 +19,9 @@ Thankfully, I found a terminal emulator called [Tilda](https://github.com/tilda/
 
 ![Tilda]({{ site.blog_url }}/assets/posts/tilda.png)
 
-I also investigated a few other terminal editors. This is how their Arabic looks.
+# UPDATE (6/19/2020)
 
-# Mac OS X Default
+It turns out the default Ubuntu system font does not support Arabic super well. The way to fix this is to change to a font
+like Monospace Regular that does. To do that, go to Edit > Preferences > General, and check "Custom Font". Afterwards, your Arabic will look super nice!
 
-![Mac Terminal]({{ site.blog_url }}/assets/posts/mac_terminal.png)
-
-# Ubuntu default
-
-![Ubuntu basic terminal]({{ site.blog_url }}/assets/posts/ubuntu.png)
-
-# Tilda
-
-![Tilda]({{ site.blog_url }}/assets/posts/tilda.png)
-
-# Guake
-
-![Guake]({{ site.blog_url }}/assets/posts/guake.png)
-
-# Terminator
-
-![Terminator]({{ site.blog_url }}/assets/posts/terminator.png)
-
-# Xterm
-
-![Xterm]({{ site.blog_url }}/assets/posts/xterm.png)
-
-It seems that a lot of the editors have the same issue, which is that their encoding bunches all of the text up when you type. I'm curious what Tilda does differently - seems that their encoding spreads out the
-characters instead.
+![new ubuntu]({{ site.blog_url }}/assets/posts/new_ubuntu.png)
