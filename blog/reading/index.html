@@ -17,8 +17,8 @@ title: Reading list
           <a href="{{ book.link }}" alt="_blank" rel="nofollow noopener">{{
             book.title
           }}</a>
-          <span class="author">by {{ book.author }}</span
-          >{% if book.star %} <span class="star">★</span>{% endif %}
+          <span class="author">by {{ book.author }}</span>{% if book.star %} <span class="star">★</span>{% endif %}
+          {% if book.review %}<br />{{ book.review }} {% endif %}
         </li>
         {% endfor %}
       </ul>
