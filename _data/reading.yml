@@ -1,7 +1,14 @@
-lastupdate: April 25, 2020
+lastupdate: July 9, 2020
 list:
   - year: 2020
     books:
+      - title: Halo&#58; The Flood
+        author: William Dietz
+        link: https://www.amazon.com/Halo-Flood-William-C-Dietz/dp/0765367300
+        review: This book is essentially a retelling of the first game in the series, and in my opinion doesn't really add anything new. While it is interesting to see what happened
+                witb the rest of the crew on the Pillar of Autumn, the book essentially tries to re-tell the game in a different manner that isn't as enjoyable as just playing the game.
+                There's also no real extra information about the world or why the people are doing what they're doing, although the Covenant bits are probably the closest we can get to that.
+                All in all, I wouldn't recommend to read unless you're a really big fan of the Halo Universe.
       - title: Halo&#58; First Strike
         author: Eric Nylund
         link: https://www.amazon.com/Halo-First-Strike-Eric-Nylund/dp/0765367319
@@ -26,10 +33,10 @@ list:
         star: no
       - title: Working&#58; Researching, Interviewing, Writing
         author: Robert A. Caro
-        star: no
+        star: yes
       - title: All the Light We Cannot See
         author: Anthony Doerr
-        star: no
+        star: yes
       - title: City of Thieves
         author: David Benioff
         star: no
@@ -41,12 +48,12 @@ list:
         star: no
       - title: The Autobiography of Malcolm X
         author: Malcolm X
-        star: no
+        star: yes
   - year: 2019
     books:
       - title: Mr. Penumbra's 24-Hour Bookstore
         author: Robin Sloan
-        star: no
+        star: yes
       - title: Secrecy World&#58; Inside the Panama Papers Investigation of Illicit Money Networks and the Global Elite
         author: Jake Bernstein
         star: no
@@ -70,7 +77,7 @@ list:
         star: no
       - title: Valley of Genius&#58; The Uncensored History of Silicon Valley (As Told by the Hackers, Founders, and Freaks Who Made It Boom)
         author: Adam Fisher
-        star: no
+        star: yes
   - year: 2018
     books:
       - title: Among the Free
@@ -91,9 +98,10 @@ list:
       - title: Missing Out&#58; In Praise of the Unlived Life
         author: Adam Phillips
         star: no
+        review: This is a book that has a lot of words but says absolutely nothing at all.
       - title: No One Would Listen
         author: Harry Markopolos
-        star: no
+        star: yes
       - title: Naïve. Super
         author: Erlend Loe
         star: no
@@ -120,7 +128,7 @@ list:
         star: no
       - title: A Thousand Splendid Suns
         author: Khaled Hosseini
-        star: no
+        star: yes
       - title: Flash Boys&#58; A Wall Street Revolt
         author: Michael   Lewis
         star: no
@@ -163,7 +171,7 @@ list:
         star: no
       - title: Gang Leader for a Day&#58; A Rogue Sociologist Takes to the Streets
         author: Sudhir Venkatesh
-        star: no
+        star: yes
       - title: Invisible Man
         author: Ralph Ellison
         star: no
@@ -171,7 +179,7 @@ list:
     books:
       - title: And the Mountains Echoed
         author: Khaled Hosseini
-        star: no
+        star: yes
       - title: Number9Dream
         author: David Mitchell
         star: no
@@ -195,7 +203,7 @@ list:
         star: no
       - title: The Andromeda Strain
         author: Michael Crichton
-        star: no
+        star: yes
   - year: 2014
     books:
       - title: Ghost in the Wires&#58; My Adventures as the World's Most Wanted Hacker
@@ -215,7 +223,7 @@ list:
         star: no
       - title: Cloud Atlas
         author: David Mitchell
-        star: no
+        star: yes
       - title: The Dog Stars
         author: Peter Heller
         star: no
@@ -224,7 +232,7 @@ list:
         star: no
       - title: Ghostwritten
         author: David Mitchell
-        star: no
+        star: yes
       - title: The Shock Doctrine&#58; The Rise of Disaster Capitalism
         author: Naomi Klein
         star: no
