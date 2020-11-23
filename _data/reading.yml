@@ -1,7 +1,15 @@
-lastupdate: September 9, 2020
+lastupdate: November 23, 2020
 list:
   - year: 2020
     books:
+      - title: Deep Work
+        author: Cal Newport
+        star: yes
+        link: https://www.amazon.com/Deep-Work-Cal-Newport-audiobook/dp/B0189PVAWY/ref=sr_1_1?crid=3QFRFT8HXXEFK&dchild=1&keywords=deep+work+cal+newport&qid=1606172993&sprefix=deep+work+cal+n%2Caps%2C182&sr=8-1
+        review: Deep Work is about how to execute and do focused, hard work. The idea here is that you can accomplish more in a few hours of deep, undistracted focused work than a lots of hours of what he calls
+                "shallow" work, which is things like checking email, responding to messages, or doing very surface level things. I really appreciated the books approach in how to strucutre your time, whether that's
+                with the Palmodoro method (25min on, 5min off) or by literally scheduling every single part of your day. It's not really interesting to read about, though, and it's fairly short - I put it down for
+                two months and didn't pick it back up, even if it was ultimatly something I wanted to do.
       - title: The Path to Power
         author: Robert A. Caro
         star: yes
