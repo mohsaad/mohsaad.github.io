@@ -1,7 +1,15 @@
-lastupdate: November 23, 2020
+lastupdate: December 20, 2020
 list:
   - year: 2020
     books:
+      - title: The Death of Ivan Ilyich
+        author: Leo Tolstoy
+        star: yes
+        link: https://www.amazon.com/Death-Ivan-Ilyich-Bantam-Classics/dp/0553210351
+        review: I'm not sure if you can even call this a book, as it's only something like 30 pages of exposition. But I found it very impactful. I think what spoke to me most was this idea that
+                nothing matters when you die. As muslims, we know this - it's instilled in us from a young age to not regard these things as permanent, and that God can take them away at any point. But I think
+                seeing Ivan Ilyich's life grow and him relegate himself to these material successes that didn't mean anything speaks to me. It's the idea of drowning yourself in fake promotions and fake success
+                because the real world is terrifying and scary, and finding a place in the working world, while easier in the short term, but comes at a cost to your moral and personal life.
       - title: Deep Work
         author: Cal Newport
         star: yes
