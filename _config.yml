@@ -5,7 +5,7 @@ kramdown:
 rdiscount:
   extensions: [smart]
 permalink: :title.html
-port: 4000
+port: 8000
 safe: false
 
 title: Mohammad Saad's Resume
