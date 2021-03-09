@@ -18,6 +18,14 @@ list:
                 persona leaves him as well, as it's not needed. Add into it is Pi's search for religion, and what it really represents in our lives and the world around us, and it's a book to think about for a
                 long time.
         star: yes
+      - title: Moneyball
+        author: Michael Lewis
+        link: https://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393324818/ref=sr_1_3?dchild=1&keywords=moneyball&qid=1615260547&sr=8-3
+        star: yes
+      - title: The House of the Scorpion
+        author: Nancy Farmer
+        link: https://www.amazon.com/House-Scorpion-Nancy-Farmer/dp/0689852231/ref=sr_1_1?crid=CHEO5ZERPK9J&dchild=1&keywords=the+house+of+the+scorpion&qid=1615261002&sprefix=the+house+of+the+sco%2Caps%2C180&sr=8-1
+        star: yes
   - year: 2020
     books:
       - title: The Death of Ivan Ilyich
