@@ -34,6 +34,13 @@ list:
         review: A children's book that I found at Goodwill one day. I remember reading it and really enjoying it as a kid, so I gave it a re-read as an adult. It's an interesting book as it's about a child
                 who really shouldn't be there, and is put into a position of power that is not expected. How would a person who's raised apart from civilization and knowingly different deal with the real world?
                 The adventure is worth a read in itself.
+        title: It's All In Your Head
+        author: Russ
+        link: https://www.amazon.com/ITS-ALL-YOUR-HEAD-Russ/dp/0062962434
+        star: no
+        review: A very motivational book that once again, tells you to ignore everything, push what you think is right, and do whatever it takes. I think these are fine concepts, but they've been done
+                so many times that I don't really think this stands out. I think the one comment that does stick with me is "It's all in your head." No one else is thinking about the things you think about,
+                so why care about them?
   - year: 2020
     books:
       - title: The Death of Ivan Ilyich
