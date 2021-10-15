@@ -1,7 +1,49 @@
-lastupdate: December 20, 2020
+lastupdate: October 15, 2021
 list:
   - year: 2021
     books:
+      - title: Dune
+        author: Frank Herbert
+        star: yes
+        review: At first, I did not like this book. The first third of this book is extremely boring
+                and throws you into a desert world without any context for the characters, which I found
+                very jarring and hard to understand. But as you read through the second and third parts,
+                you start to appreciate how the first part of the book was written as Paul grows up and
+                takes on his enemies. It's a very fun, exciting adventure through the universe and I'm
+                looking forward to the movie.
+      - title: A People's History of the United States
+        author: Howard Zinn
+        star: yes
+        link: https://www.amazon.com/dp/B015XEWZHI/ref=cm_sw_r_tw_dp_94394Z7RX7SD2SKK879Y
+        review: A different perspective on American History, written from the people that "lost", including the Native Americans, the slaves, and the working classes.
+                It's written with an idea in mind, that America was a society that built on and exploited these people, and that the idea of "class mobility" is a little
+                bit of a fib. The book also takes an aggressive shot at the idea of American Exceptionalism, arguing that the best of times for people were really under
+                socialists and their societies. In a sense, it reads more like a full-throated argument for socialism rather than anything else, which is an interesting
+                concept. As a contrarian, I really liked this book, but I did find the zealousness a bit annoying. It's a very worthwhile read.
+      - title: Aqeedah Tahaawiyyah - The Creed of Imam Tahawi
+        author: Imam Abu Jafar At-Tahawi
+        link: https://www.amazon.com/gp/product/1545353387/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1
+        star: yes
+        review: If you're a Muslim, read this book, and really try to reflect on the concepts and how they affect your perception of God in your daily life. This is essentially
+                a book on "what do we believe", and should be basic concepts about God, his attributes and powers. It's also a small primer on some of the day-to-day, but not
+                a huge detail of laws and actions. It's short and so I recommend it.
+      - title: Freedom
+        author: Jonathan Frazen
+        link: https://www.amazon.com/Jonathan-Franzen-Freedom-Novel/dp/B0082S1R1I/ref=sr_1_2?crid=LM4QX126G2LO&dchild=1&keywords=freedom+jonathan+franzen&qid=1630178829&s=books&sprefix=freedom+jo%2Cstripbooks%2C183&sr=1-2
+        star: yes
+        review: People call this a "Great American Novel" and I'm inclided to both agree and disagree. It's...
+                a strange book. It tells the story of this perfect, ideal family and how said perfect, ideal
+                family falls apart, mostly because the mother has a ton of issues in her own personal life
+                that end up spilling into everyone else's. It's an interesting take on a woman whose own
+                independent personality really has an effect on her closest relatives, including her husband,
+                son, and daughter, and how those people change with time, take on new personalities and beliefs.
+                Compared to her husband, Walter, who is ideological to a fault, the main character is emotional,
+                neurotic, and probably depressed. She has her own set of family issues which causes her to resent
+                where she came from, and a lot of the novel is seen from her perspective as she comes to terms with
+                her background. The same goes for the other characters, who, given the effects of the main character,
+                tries to navigate a new world of the early 2000s, with Iraq and the internet revolution coming
+                along. I think it's an interesting example of life with its ups and downs,
+                and as a result I'd really recommend it.
       - title: 88 Names
         author: Matt Ruff
         link: https://www.amazon.com/88-Names-Novel-Matt-Ruff/dp/0062854674
@@ -30,7 +72,7 @@ list:
       - title: The House of the Scorpion
         author: Nancy Farmer
         link: https://www.amazon.com/House-Scorpion-Nancy-Farmer/dp/0689852231/ref=sr_1_1?crid=CHEO5ZERPK9J&dchild=1&keywords=the+house+of+the+scorpion&qid=1615261002&sprefix=the+house+of+the+sco%2Caps%2C180&sr=8-1
-        star: yes
+        star: no
         review: A children's book that I found at Goodwill one day. I remember reading it and really enjoying it as a kid, so I gave it a re-read as an adult. It's an interesting book as it's about a child
                 who really shouldn't be there, and is put into a position of power that is not expected. How would a person who's raised apart from civilization and knowingly different deal with the real world?
                 The adventure is worth a read in itself.
