@@ -50,7 +50,7 @@ compress_html:
 collections:
   my_tags:
     output: true
-    permalink: /tagged/:slug/
+    permalink: /blog/tagged/:slug/
 defaults:
   -
     scope:
