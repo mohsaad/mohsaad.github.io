@@ -1,38 +1,23 @@
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input: GFM
-rdiscount:
-  extensions: [smart]
-permalink: :title.html
-port: 8001
-safe: false
+###########
+# site.title
 
-title: Mohammad Saad's Resume
-name: Mohammad Saad
-nickname: mohsaad
-email: saad@mohsaad.com
-email_full: mailto:saad@mohsaad.com
-website: https://mohsaad.com
-website_full: https://mohsaad.com
+title: jekyllBear
+description: a minimal, text focused blog theme
+# baseurl: "/jekyllBear" # the subpath of your site, e.g. /blog/
+url: "https://knhash.in/jekyllBear" # the base hostname & protocol for your site
+# host: 0.0.0.0
 
 
-baseurl: "/"
+#########################
+# more settings
 
 plugins:
   - jekyll-redirect-from
-  - jekyll-paginate
 
 whitelist:
   - jekyll-redirect-from
-  - jekyll-paginate
 
-
-######################################
-### Blog details
-######################################
-blog_url: "/blog"
-
+markdown: kramdown
 
 compress_html:
   clippings: all

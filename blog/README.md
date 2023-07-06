@@ -1,132 +1,105 @@
-> NOTE! Kiko-plus theme will not be update anymore. Please see the new and easier version, [kiko-now](https://github.com/AWEEKJ/kiko-now) theme which is mixed [jekyll-now](https://github.com/barryclark/jekyll-now) and Kiko-plus.
+# jekyllBear
 
-# Kiko Plus Theme
+## An easy to use, minimal, text focused Jekyll theme
 
-![image](/images/image.png)
+[Bear Blog](https://bearblog.dev/) is *"a blogging platform where words matter most"*. 
 
-You can see live demo [here](https://aweekj.github.io/Kiko-plus). This theme is inspired by [Kiko](http://github.com/gfjaru/Kiko) theme.
+This is a port of it's theme to Jekyll, with some tweaks. So you can use GitHub Pages to host your blog while getting the same awesome Bear Blog feels.
 
-## Features
+**Stop worrying about the style, focus on your writing.**
 
-- Disqus comment system
-- Google analytics
-- Pagination support
-- Custom tags
-- SEO support
+- Looks great on *any* device
+- Tiny, optimized, and awesome pages, with [a 100 on PageSpeed Insights](https://pagespeed.web.dev/report?url=https%3A%2F%2Fknhash.in%2FjekyllBear%2F)
+- No trackers, ads, or scripts, *did I mention minimal already?*
+- Auto light and dark themes
+- Tag support, to filter blog pages
+- Quick, *15 minute* setup
+- Gallery view for your images
+- Code highlighting
+
+## Screenshots
+
+![Home](https://raw.githubusercontent.com/Knhash/jekyllBear/master/assets/images/JBHome.png?raw=true "Home") 
+![Blog](https://raw.githubusercontent.com/Knhash/jekyllBear/master/assets/images/JBBlog.png?raw=true "Blog") 
+![LongForm](https://raw.githubusercontent.com/Knhash/jekyllBear/master/assets/images/JBLongForm.png?raw=true "LongForm") 
+![Poetry](https://raw.githubusercontent.com/Knhash/jekyllBear/master/assets/images/JBPoetry.png?raw=true "Poetry") 
 
 
 ## Installation
 
-#### Method 1: new master's repository (The Best)
+Add this line to your Jekyll site's `Gemfile`:
 
-1. First [fork](https://github.com/AWEEKJ/Kiko-plus/fork) it.
-2. Change your forked repository name _Kiko-plus_ to __USERNAME.github.io__ where __USERNAME__ is your github username.
-3. Access your new blog via [https://username.github.io](https://username.github.io).
-4. [See configuration](#configuration).
-
-#### Method 2: gh-pages in existing repository
-
-1. Create a new branch called _gh-pages_ in the repository where you want to add a template [managing branches](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/).
-2. From command line run `git clone https://github.com/AWEEKJ/Kiko-plus.git` - this will clone _Kiko-plus_ template to your computer.
-3. Create new branch `git checkout -b gh-pages` where _gh-pages_ will be your branch name.
-4. Add remote, which is your repo from the first step, to your new branch `git remote add gh-pages https://github.com/<yourName>/<yourMaster>/gh-pages`. _yourName_ is your account name and _yourMaster_ is your repository.
-5. Push new branch to remote `git push gh-pages`.
-6. Update `_config.yml` file by changing `baseurl: "<branchName>"` _branchName_ is your branch name where _gh-pages_ resides. See [configuration](#configuration).
-
-## Configuration
-
-All configuration is done via `_config.yml` file which you will find in your main repo folder. Change this `<something>` to yours.
-
-### Basic
-
-- Config your blog name.
-
-```yml
-name: <blog-name>
+```ruby
+gem "jekyll-bear-theme"
 ```
 
-- These configuration in `author:` is for links to icons in footer. If you want to add more link icons, modify `_includes/footer.html` file.
+And add this line to your Jekyll site's `_config.yml`:
 
-```yml
-author:
-  facebook:         your-id
-  twitter:          your-id
-  github:           your-id
-  linkedin:         your-id
-  medium:           your-id
-  tumblr:           your-id
-  email:            your-id@your-email.com
+```yaml
+theme: jekyll-bear-theme
 ```
 
-- Change copyright year and name in footer.
+And then execute:
 
-```yml
-copyright:
-  year:             2017
-  name:             Kiko
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install jekyll-bear-theme
+
+## Usage
+
+Create a new repository for your website (if necessary)
+```jekyll
+jekyll new my_website
 ```
 
-### Google analytics
+Copy over the following content from this repository, to serve as a base setup
 
-- Change this to your Google Analytic ID.
-
-```yml
-google-analytics:
-  id:               "your-id"
+```
+/posts      -> Where you will write your posts
+/_my_tags   -> Where you will define your tags, if you need to add anything new
+blog.md     -> Homepage for your blog
+index.md    -> Website homepage
+404.html    -> When a page is not available
 ```
 
-### Disqus
+You will need to update `_config.yml`. Copy over the lines after
 
-- Change this to your Disqus short name.
-
-```yml
-disqus:
-  id:               "your-id"
 ```
-
-### URL
-
-- Config your domain.
-
-```yml
-url: "https://<your-name>.github.io"
+#########################
+# more settings
 ```
+in the `_config.yml` present in this repository to your website repository `_config.yml`.
 
-- **NOTE** When if running locally, change url to 
+Any new links you want to add to the navbar goes here, towards the end.
+This also defines the bits about tags and filtering.
 
-```yml
-url: "https://localhost:4000"
-```
+There should be 3 kinds of blog posts in the posts folder, an example of each type you can use:
 
-- Change this to your branch name where _gh-pages_ resides. 
-- **NOTE** apply only if you used __Method 2__ for installation.
+- long-form reading
+- poetry
+- gallery view
 
-```yml
-baseurl: "/<branch-name>"
-```
+Use them as templates for your front matter.
 
-## Run in Local
+>To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`.
 
-1. Download or clone your remote repository.
-2. Go inside folder. First, run `rake geminstall`. 
-3. Second, run `jekyll serve` or `rake preview`. This will build a website which you can access [https://localhost:4000](https://localhost:4000). Make sure that `url` in `_config.yml` file is `url: "https://localhost:4000"`. You need to have [Jekyll](https://jekyllrb.com/docs/installation/) installed to do this.
 
-## Rakefile Usage
+## Contributing
 
-```bash
-# Create new post
-$ rake post title="A Title" [date="2015-08-16"] [tags="[tag1, tag2]"] 
+Bug reports and pull requests are welcome on GitHub at https://github.com/knhash/jekyllBear. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-# Create new draft post
-$ rake draft title="A Title" [date="2015-08-16"] [tags="[tag1, tag2]"]
+## Development
 
-# Install Jekyll Plugins. Do before running in local.
-$ rake geminstall
+To set up your environment to develop this theme, run `bundle install`.
 
-# Run in Local
-$ rake preview
-```
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `jekyllBear.gemspec` accordingly.
 
 ## License
 
-This theme is released under MIT License.
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
