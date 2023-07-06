@@ -32,7 +32,7 @@ whitelist:
 ### Blog details
 ######################################
 blog_url: "/blog"
-
+blog_time: "mohsaad's blog"
 
 compress_html:
   clippings: all
@@ -70,13 +70,13 @@ exclude:
 
 exclude: [vendor]
 
-Blog: /blog
+Blog: /blog/posts.html
 
 # Add general links to site pages here
 links:
-  Resume: /assets/resume.pdf
+  Resume: /
   
 
 # Add links for more focus here
-special_links:
-  "Search": https://duckduckgo.com
+# special_links:
+#  "Search": https://duckduckgo.com
