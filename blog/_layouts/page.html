@@ -1,12 +1,24 @@
 ---
-layout: default
+layout: compress
 ---
-<header>
-  <div class="header-small">
-    <a href="{{site.url}}">{{ site.name }}</a>
-  </div>
-</header>
-<div class="page">
-  <div class="page-title">{{ page.title }}</div>
-  {{ content }}
-</div>
+
+{% include head.html %}
+
+    <main>
+
+        {% include header.html %}
+
+        <article>
+
+            <h1>{{ page.title }}</h1>
+
+            {{ content }}
+
+        </article>
+
+    </main>
+
+    {% include footer.html %}
+
+</body>
+</html>
