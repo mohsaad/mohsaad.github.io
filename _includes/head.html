@@ -1,24 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.blog_url }}/assets/css/main.css" type="text/css">
-  <link rel="stylesheet" href="{{ site.blog_url }}/assets/css/reading.scss" type="text/css">
-
-  <!-- Font -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="{{ site.baseurl }}static/img/favicon.ico">
-
-  <!-- Mathjax Support -->
-  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }} | {{ blog.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="shortcut icon" href="{{ site.blog_url }}/assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ site.blog_url }}/assets/favicon.ico" type="image/x-icon">
+    <link href='{{ site.blog_url }}/feed.xml' rel='alternate' type='application/atom+xml'>
+    <link rel="canonical" href="{{ site.blog_url }}{{ page.url }}">
+    <link rel="stylesheet" href="{{ site.blog_url }}/assets/style.css">
 </head>
+
+<body>
