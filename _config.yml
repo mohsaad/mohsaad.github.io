@@ -16,7 +16,7 @@ email_full: mailto:saad@mohsaad.com
 website: https://mohsaad.com
 website_full: https://mohsaad.com
 
-
+url: "/"
 baseurl: "/"
 
 plugins:
@@ -80,3 +80,32 @@ links:
 # Add links for more focus here
 # special_links:
 #  "Search": https://duckduckgo.com
+
+##################################
+# TIL Section here
+##################################
+til_title: mohsaad's Today I Learned
+til_author: mohsaad
+til_subtitle: Daily Learnings
+
+til_baseurl: "/til"
+
+footer_only_homepage: true
+footer_url: "https://github.com/rhl-bthr"
+footer_text: "Theme by rhl-bthr."
+
+profile-picture: assets/profile.png
+favicon_location: assets/favicon.ico
+
+permalink: /til/:year-:month-:day-:title/
+sass:
+    style: compressed
+    sass_dir: css
+
+til_navbar:
+ - name: "About"
+   link: "about"
+ - name: "Blog"
+   link: "/blog"
+ - name: "Resume"
+   link: "/"
