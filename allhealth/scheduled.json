@@ -1,0 +1,160 @@
+{
+  "scheduledWorkouts": [
+    {
+      "id": 1,
+      "type": "run",
+      "name": "Morning Easy Run",
+      "date": "2025-01-09T07:00:00Z",
+      "scheduledDuration": 2700,
+      "scheduledDistance": 5.0,
+      "intensity": "Zone 1-2",
+      "notes": "Recovery run, keep it conversational pace",
+      "coach": "Training Plan",
+      "isRecurring": true,
+      "recurringPattern": "weekly"
+    },
+    {
+      "id": 2,
+      "type": "weightlifting",
+      "name": "Full Body Strength",
+      "date": "2025-01-09T18:30:00Z",
+      "scheduledDuration": 3600,
+      "intensity": "Moderate",
+      "notes": "Focus on compound movements: squats, deadlifts, bench press",
+      "coach": "Strength Coach",
+      "isRecurring": true,
+      "recurringPattern": "twice-weekly",
+      "targetExercises": [
+        {"name": "Squats", "sets": 4, "reps": "8-10", "weight": "bodyweight + 45lbs"},
+        {"name": "Deadlifts", "sets": 3, "reps": "6-8", "weight": "bodyweight + 60lbs"},
+        {"name": "Bench Press", "sets": 4, "reps": "8-10", "weight": "bodyweight"},
+        {"name": "Pull-ups", "sets": 3, "reps": "max", "weight": "bodyweight"}
+      ]
+    },
+    {
+      "id": 3,
+      "type": "cycling",
+      "name": "Interval Training",
+      "date": "2025-01-10T17:00:00Z",
+      "scheduledDuration": 3600,
+      "scheduledDistance": 20.0,
+      "intensity": "Zone 4-5",
+      "notes": "4x8 min at threshold power, 3 min recovery between intervals",
+      "coach": "Cycling Coach",
+      "targetPower": 280,
+      "isRecurring": false
+    },
+    {
+      "id": 4,
+      "type": "swim",
+      "name": "Technique Focus",
+      "date": "2025-01-11T06:30:00Z",
+      "scheduledDuration": 3000,
+      "scheduledDistance": 2.5,
+      "intensity": "Zone 1-2",
+      "notes": "Focus on bilateral breathing, catch technique drills",
+      "coach": "Swim Coach",
+      "isRecurring": true,
+      "recurringPattern": "twice-weekly",
+      "drills": [
+        "200m warm-up easy freestyle",
+        "8x50m catch-up drill",
+        "6x100m bilateral breathing",
+        "200m cool-down"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "run",
+      "name": "Speed Work",
+      "date": "2025-01-12T08:00:00Z",
+      "scheduledDuration": 2700,
+      "scheduledDistance": 6.0,
+      "intensity": "Zone 5",
+      "notes": "Track session: 6x400m at 5K pace, 90s recovery jog",
+      "coach": "Running Coach",
+      "targetPace": "6:45",
+      "isRecurring": true,
+      "recurringPattern": "weekly"
+    },
+    {
+      "id": 6,
+      "type": "rowing",
+      "name": "Steady State",
+      "date": "2025-01-13T18:00:00Z",
+      "scheduledDuration": 2400,
+      "scheduledDistance": 6.0,
+      "intensity": "Zone 2",
+      "notes": "40 minutes steady state rowing at 18-20 SPM",
+      "coach": "Rowing Coach",
+      "targetPower": 190,
+      "targetStrokeRate": 19,
+      "isRecurring": true,
+      "recurringPattern": "weekly"
+    },
+    {
+      "id": 7,
+      "type": "run",
+      "name": "Long Run",
+      "date": "2025-01-14T08:00:00Z",
+      "scheduledDuration": 5400,
+      "scheduledDistance": 12.0,
+      "intensity": "Zone 2",
+      "notes": "Build endurance, negative split recommended",
+      "coach": "Training Plan",
+      "targetPace": "8:15",
+      "isRecurring": true,
+      "recurringPattern": "weekly"
+    },
+    {
+      "id": 8,
+      "type": "cycling",
+      "name": "Recovery Ride",
+      "date": "2025-01-15T10:00:00Z",
+      "scheduledDuration": 2700,
+      "scheduledDistance": 15.0,
+      "intensity": "Zone 1",
+      "notes": "Active recovery, keep it easy and spin those legs",
+      "coach": "Training Plan",
+      "targetPower": 150,
+      "isRecurring": true,
+      "recurringPattern": "weekly"
+    },
+    {
+      "id": 9,
+      "type": "weightlifting",
+      "name": "Upper Body Power",
+      "date": "2025-01-16T19:00:00Z",
+      "scheduledDuration": 3300,
+      "intensity": "High",
+      "notes": "Explosive movements, lower reps with good form",
+      "coach": "Strength Coach",
+      "isRecurring": true,
+      "recurringPattern": "weekly",
+      "targetExercises": [
+        {"name": "Power Cleans", "sets": 5, "reps": "3-5", "weight": "moderate"},
+        {"name": "Push Press", "sets": 4, "reps": "5-6", "weight": "challenging"},
+        {"name": "Weighted Pull-ups", "sets": 4, "reps": "6-8", "weight": "bodyweight + 25lbs"},
+        {"name": "Medicine Ball Slams", "sets": 3, "reps": "10", "weight": "20lb ball"}
+      ]
+    },
+    {
+      "id": 10,
+      "type": "swim",
+      "name": "Endurance Set",
+      "date": "2025-01-17T07:00:00Z",
+      "scheduledDuration": 3600,
+      "scheduledDistance": 3.0,
+      "intensity": "Zone 2-3",
+      "notes": "Build swimming endurance with progressive distance",
+      "coach": "Swim Coach",
+      "isRecurring": false,
+      "drills": [
+        "400m warm-up mixed strokes",
+        "5x200m freestyle increasing pace",
+        "1000m continuous freestyle",
+        "300m cool-down backstroke"
+      ]
+    }
+  ]
+}
