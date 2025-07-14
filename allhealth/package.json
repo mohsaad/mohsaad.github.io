@@ -1,0 +1,24 @@
+{
+  "name": "health-dashboard",
+  "version": "1.0.0",
+  "description": "A modern health metrics dashboard",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build": "echo 'Build complete'",
+    "start": "live-server --port=3000"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "chart.js": "^4.4.0",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "keywords": ["health", "dashboard", "react", "metrics"],
+  "author": "Health Dashboard",
+  "license": "MIT"
+}
