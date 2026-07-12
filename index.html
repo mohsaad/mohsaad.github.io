@@ -1,7 +1,476 @@
----
-layout: layout
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammad Saad (mohsaad)</title>
+  <link rel="icon" href="static/img/favicon.ico" type="image/x-icon" />
 
-{% include employment.html %}
-{% include publications.html %}
-{% include education.html %}
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #777;
+      --border: #e4e4e4;
+      --accent: #0055cc;
+      --tag-bg: #f0f0f0;
+      --max: 700px;
+      --radius: 10px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 3rem 1.5rem 6rem;
+      transition: background .3s, color .3s;
+    }
+
+    main { max-width: var(--max); margin: 0 auto; }
+
+    /* ── Theme toggle ── */
+    .theme-toggle {
+      position: fixed; top: 1.1rem; right: 1.1rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 99px; padding: 0.3rem 0.8rem;
+      font-size: 0.78rem; color: var(--muted); cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+      transition: background .2s, color .2s;
+      z-index: 100;
+    }
+    .theme-toggle:hover { color: var(--text); }
+
+    /* ── Header ── */
+    header { margin-bottom: 3rem; }
+    .header-inner { display: flex; align-items: flex-start; gap: 1.25rem; margin-bottom: 1.25rem; }
+    .avatar {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: linear-gradient(135deg, #0055cc 0%, #00c6ff 100%);
+      flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.5rem; font-weight: 700; letter-spacing: -1px;
+      object-fit: cover;
+    }
+    .header-text h1 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; }
+    .header-text .role { color: var(--muted); font-size: 0.88rem; margin-top: 0.2rem; }
+    .header-text .location { color: var(--muted); font-size: 0.82rem; }
+    .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .nav-links a {
+      color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 500;
+      padding: 0.3rem 0.7rem; border-radius: 99px; background: var(--tag-bg);
+      transition: background .15s, color .15s;
+    }
+    .nav-links a:hover { background: var(--accent); color: #fff; }
+
+    /* ── Sections ── */
+    section { margin-bottom: 2.75rem; }
+    h2 {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--muted); margin-bottom: 1rem;
+    }
+    p { color: #444; margin-bottom: 0.75rem; font-size: 0.93rem; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 2.25rem 0; }
+
+    /* ── Gallery ── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+    .gallery-item {
+      aspect-ratio: 1;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--tag-bg);
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .3s ease, filter .3s;
+      filter: brightness(.97);
+    }
+    .gallery-item:hover img { transform: scale(1.04); filter: brightness(1); }
+    .gallery-item .caption {
+      position: absolute; inset: 0; background: rgba(0,0,0,.45);
+      color: #fff; font-size: 0.75rem; padding: 0.6rem;
+      display: flex; align-items: flex-end;
+      opacity: 0; transition: opacity .25s;
+    }
+    .gallery-item:hover .caption { opacity: 1; }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-item.wide { grid-column: span 2; }
+
+    /* ── Resume ── */
+    .resume-item { margin-bottom: 1.5rem; }
+    .resume-item h3 { font-size: 0.93rem; font-weight: 700; }
+    .resume-item .meta { font-size: 0.8rem; color: var(--muted); margin: 0.15rem 0 0.4rem; }
+    .resume-item ul { padding-left: 1.15rem; font-size: 0.86rem; color: #555; }
+    .resume-item .list-text,
+    .resume-item ul div { font-size: 0.86rem; color: #555; }
+    .resume-item ul li { margin-bottom: 0.25rem; }
+    .skills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+    .skill {
+      background: var(--tag-bg); border-radius: 5px;
+      padding: 0.2rem 0.6rem; font-size: 0.76rem; color: #555;
+    }
+
+    .pub-links { display: flex; gap: 0.5rem; margin-top: 0.4rem; flex-wrap: wrap; }
+    .pub-link {
+      font-size: 0.76rem; font-weight: 500; color: var(--accent);
+      background: var(--tag-bg); border-radius: 5px;
+      padding: 0.18rem 0.55rem; text-decoration: none;
+      transition: background .15s, color .15s;
+    }
+    .pub-link:hover { background: var(--accent); color: #fff; }
+
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.5rem; }
+    .edu-card {
+      background: var(--tag-bg); border-radius: var(--radius);
+      padding: 0.85rem 1rem; border: 1px solid var(--border);
+    }
+    .edu-degree { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .edu-school { font-size: 0.8rem; color: var(--muted); }
+    .edu-year { font-size: 0.76rem; color: var(--accent); margin-top: 0.35rem; font-weight: 600; }
+
+    .edu-detail { font-size: 0.77rem; color: var(--muted); margin-top: 0.3rem; line-height: 1.5; }
+
+    /* ── Shelf tabs ── */
+    .tabs { display: flex; gap: 0; margin-bottom: 1rem; border-bottom: 1px solid var(--border); }
+    .tab {
+      background: none; border: none; cursor: pointer;
+      padding: 0.45rem 0.9rem; font-size: 0.85rem; color: var(--muted);
+      border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all .15s;
+    }
+    .tab.active { color: var(--text); border-bottom-color: var(--accent); font-weight: 600; }
+
+    .filters { display: flex; gap: 0.4rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .pill {
+      background: var(--tag-bg); border: none; border-radius: 99px;
+      padding: 0.22rem 0.7rem; font-size: 0.78rem; cursor: pointer; color: #555;
+      transition: background .15s;
+    }
+    .pill.active { background: var(--text); color: var(--bg); }
+
+    .year-group { margin-bottom: 1.75rem; }
+    .year-label { font-size: 0.72rem; font-weight: 700; color: var(--muted);
+      text-transform: uppercase; letter-spacing: .08em; margin-bottom: 0.6rem; }
+    .shelf-grid { display: flex; flex-direction: column; }
+    .shelf-item {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 0.5rem 0; border-bottom: 1px solid var(--border); gap: 1rem;
+    }
+    .shelf-item:last-child { border-bottom: none; }
+    .item-title { font-size: 0.88rem; font-weight: 500; }
+    .item-sub { font-size: 0.8rem; color: var(--muted); }
+    .rating { font-size: 0.95rem; flex-shrink: 0; }
+
+    footer { margin-top: 4rem; font-size: 0.78rem; color: var(--muted); }
+
+    /* ── Dark mode ── */
+    body.dark {
+      --bg: #111; --surface: #1a1a1a; --text: #e4e4e4;
+      --muted: #777; --border: #272727; --accent: #4d9fff; --tag-bg: #1e1e1e;
+    }
+    body.dark p { color: #aaa; }
+    body.dark .resume-item ul,
+    body.dark .resume-item .list-text,
+    body.dark .resume-item ul div { color: #999; }
+    body.dark .skill, body.dark .item-sub { color: #888; }
+  </style>
+</head>
+<body>
+
+<button class="theme-toggle" id="theme-btn" onclick="toggleTheme()">🌙 Dark</button>
+
+<main>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <img class="avatar" src="images/profile_pic_bike.jpg" alt="Mohammad Saad" />
+      <div class="header-text">
+        <h1>Mohammad Saad</h1>
+        <div class="role">Senior Software Engineer</div>
+        <div class="location">📍 Seattle, WA</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="https://github.com/mohsaad" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/mohsaad" target="_blank">LinkedIn</a>
+      <a href="https://mohsaad23.notion.site/" target="_blank">Writing</a>
+      <a href="#resume">Resume</a>
+    </nav>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Software engineer with a background spanning robotics perception, computer vision,
+      SLAM, and cloud infrastructure. I like working end-to-end — 
+      from bare-metal systems to production pipelines — and thrive at the
+      intersection of algorithms and infrastructure.
+    </p>
+    <p>
+      Outside of Engineering I'm a long-course triathlete and Arabic student,
+      having run several Ironman triathlons and studying Quranic Arabic.
+    </p>
+  </section>
+
+  <hr /> 
+
+  <!-- Gallery -->
+   <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item tall">
+        <img src="images/bixby_creek.jpg" alt="Milky Way over Bixby Creek" />
+        <div class="caption">Milky Way over Bixby Creek Bridge, CA</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/star_trail.jpg" alt="Star trail" />
+        <div class="caption">Star Trails over Shark Fin Cove, Davenport, CA</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/wisconsin_running.JPG" alt="Ironman 70.3 Wisconsin Run" />
+        <div class="caption">Ironman 70.3 Wisconsin Run</div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Patents & Publications -->
+  <section id="patents">
+    <h2>Patents &amp; Publications</h2>
+
+    <div class="resume-item">
+      <h3>System and Method to Facilitate Calibration of Sensors in a Vehicle</h3>
+      <div class="meta">Shunsho Kaku, Mohammad Saad &nbsp;·&nbsp; US Patent #11514681 &nbsp;·&nbsp; November 2022</div>
+      <div class="pub-links">
+        <a href="https://www.freepatentsonline.com/11514681.html" target="_blank" class="pub-link">Patent ↗</a>
+      </div>
+    </div>
+
+    <div class="resume-item">
+      <h3>2D to 3D Line-Based Registration with Unknown Associations via Mixed-Integer Programming</h3>
+      <div class="meta">Steven A. Parkison, Jeffrey M. Walls, Ryan W. Wolcott, Mohammad Saad, Ryan M. Eustice &nbsp;·&nbsp; ICRA 2020</div>
+      <div class="pub-links">
+        <a href="https://ras.papercept.net/proceedings/ICRA20/1955.pdf" target="_blank" class="pub-link">Paper ↗</a>
+        <a href="https://ras.papercept.net/proceedings/ICRA20/1955.mp4" target="_blank" class="pub-link">Presentation ↗</a>
+        <a href="https://www.freepatentsonline.com/y2021/0082148.html" target="_blank" class="pub-link">Patent ↗</a>
+      </div>
+    </div>
+
+    <div class="resume-item">
+      <h3>Systems and Methods for Locating a Mobile Phone in a Vehicle</h3>
+      <div class="meta">US Patent #10637985 &nbsp;·&nbsp; April 2020</div>
+      <div class="pub-links">
+        <a href="http://www.freepatentsonline.com/10637985.html" target="_blank" class="pub-link">Patent ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <div class="resume-item">
+      <h3>Zoox - Senior Software Engineer</h3>
+      <div class="meta">Seattle, WA · 2026 – present</div>
+      <ul>
+        <li>Perception / Fleet Mapping -- building maps for self-driving cars from a variety of sources</li>
+      </ul>
+    </div>
+    <div class="resume-item">
+      <h3>Amazon — Senior System Development Engineer</h3>
+      <div class="meta">Seattle, WA · 2024 – 2026</div>
+      <ul>
+        <li>Technical lead for the Tech Transformation group in Amazon Robotics</li>
+        <li>Led a group of 5 engineers to develop solutions at the pre-con and pre-live deployments</li>
+        <li>Optimized quality control processes, rewriting and training new vision QC models to inspect 1m+ containers across 15 warehouses</li>
+        <li>Built novel solutions for point cloud segmentation, reducing time to segmentation by 50%</li>
+      </ul>
+    </div>
+    <div class="resume-item">
+      <h3>AKASA — Software Engineer</h3>
+      <div class="meta">Seattle, WA · 2024 – 2026</div>
+      <ul>
+        <li>Led end-to-end development of distributed healthcare document-processing systems spanning retrieval, storage, generation, and persistence.</li>
+        <li>Refactored Windows provisioning infrastructure, reducing build time by 60x and cutting AWS spend by roughly $200k/year.</li>
+        <li>Shipped core platform capabilities including fair queueing, multi-client retrieval, DB-backed document ETL, CI pipelines, and regression test frameworks.</li>
+        <li>Built production observability with Grafana, Prometheus, and OpenSearch to support 24/7 internal service uptime.</li>
+        <li>Mentored junior engineers and helped establish cleaner service architecture patterns across the platform.</li>
+      </ul>
+    </div>
+    <div class="resume-item">
+      <h3>Toyota Research Institute — Software Engineer</h3>
+      <div class="meta">Los Altos, CA & Ann Arbor, MI · 2018 – 2024</div>
+      <ul>
+        <li>Owned calibration and sensor-fusion systems for LiDAR, radar, and camera stacks on autonomous vehicle platforms.</li>
+        <li>Developed GNSS-feature fusion for urban localization, reducing cold starts in GPS-denied areas by up to 10 minutes across Japan and North America deployments.</li>
+        <li>Tuned and deployed perception pipelines using Kalman filters, particle filters, odometry tuning, and sensor uncertainty modeling.</li>
+        <li>Built evaluation tooling for post-drive sensor calibration analysis, enabling faster validation after vehicle data collection.</li>
+        <li>Served as a platform-wide code reviewer across perception, planning, and control for a 200+ person autonomous vehicle organization.</li>
+      </ul>
+    </div>
+    <div class="resume-item">
+      <h3>Iris Automation — Software Engineer</h3>
+      <div class="meta">San Francisco, CA · 2017 – 2018</div>
+      <ul>
+        <li>Built and deployed drone collision-avoidance software using computer vision and ROS.</li>
+        <li>Developed perception components for onboard autonomy systems operating under real-time flight constraints.</li>
+      </ul>
+    </div>
+
+    <div class="resume-item">
+      <h3>Skills</h3>
+      <div class="skills">
+        <span class="skill">C++</span><span class="skill">Python</span>
+        <span class="skill">AWS/CDK</span>
+        <span class="skill">SLAM / Factor Graphs</span><span class="skill">LiDAR / Point Clouds</span>
+        <span class="skill">Computer Vision</span><span class="skill">ML Deployment</span>
+        <span class="skill">PyTorch</span><span class="skill">Kubernetes / k8s</span>
+        <span class="skill">Docker</span>
+      </div>
+    </div>
+
+    <div class="resume-item">
+      <h3>Education</h3>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-degree">M.S. Robotics</div>
+          <div class="edu-school">University of Michigan, Ann Arbor</div>
+          <div class="edu-year">2020 – 2021</div>
+          <div class="edu-detail">GPA: 3.96 / 4.0</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-degree">B.S. Electrical Engineering</div>
+          <div class="edu-school">University of Illinois at Urbana-Champaign</div>
+          <div class="edu-year">2013 – 2016</div>
+          <div class="edu-detail">Undergraduate Thesis: Guided Filters for Depth Image Enhancement — Advisor: Prof. Minh Do</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <a href="https://mohsaad.com" target="_blank" style="color:var(--accent);text-decoration:none;">Thesis</a -->
+
+  <hr />
+
+  <!-- Shelf -->
+  <!-- <section id="shelf">
+    <h2>Shelf</h2>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('books', this)">Books</button>
+      <button class="tab" onclick="switchTab('movies', this)">Films</button>
+    </div>
+    <div class="filters">
+      <button class="pill active" onclick="setFilter('all', this)">All</button>
+      <button class="pill" onclick="setFilter('star', this)">⭐ Favorites</button>
+      <button class="pill" onclick="setFilter('liked', this)">👍 Liked</button>
+    </div>
+    <div id="shelf-content"></div>
+  </section> -->
+
+  <hr />
+  <footer>Built with plain HTML &amp; CSS · Hosted on GitHub Pages</footer>
+
+</main>
+
+<script>
+// ── Theme ──
+let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+function applyTheme() {
+  document.body.classList.toggle("dark", dark);
+  document.getElementById("theme-btn").textContent = dark ? "☀️ Light" : "🌙 Dark";
+}
+function toggleTheme() { dark = !dark; applyTheme(); }
+applyTheme();
+
+// ── Shelf data ──
+const data = {
+  books: {
+    2025: [
+      { title: "Meditations", sub: "Marcus Aurelius", rating: "star" },
+      { title: "The Creative Act", sub: "Rick Rubin", rating: "star" },
+      { title: "Working in Public", sub: "Nadia Eghbal", rating: "liked" },
+    ],
+    2024: [
+      { title: "Same as Ever", sub: "Morgan Housel", rating: "star" },
+      { title: "Four Thousand Weeks", sub: "Oliver Burkeman", rating: "star" },
+      { title: "Excellent Advice for Living", sub: "Kevin Kelly", rating: "star" },
+      { title: "Staff Engineer", sub: "Will Larson", rating: "liked" },
+      { title: "Build", sub: "Tony Fadell", rating: "liked" },
+      { title: "The Mom Test", sub: "Rob Fitzpatrick", rating: "liked" },
+    ],
+    2023: [
+      { title: "Tomorrow, and Tomorrow, and Tomorrow", sub: "Gabrielle Zevin", rating: "star" },
+      { title: "How to Do Nothing", sub: "Jenny Odell", rating: "star" },
+      { title: "The Courage to Be Disliked", sub: "Ichiro Kishimi", rating: "liked" },
+    ]
+  },
+  movies: {
+    2025: [
+      { title: "The Brutalist", sub: "Brady Corbet", rating: "star" },
+      { title: "Anora", sub: "Sean Baker", rating: "liked" },
+    ],
+    2024: [
+      { title: "Dune: Part Two", sub: "Denis Villeneuve", rating: "star" },
+      { title: "Past Lives", sub: "Celine Song", rating: "star" },
+      { title: "The Holdovers", sub: "Alexander Payne", rating: "star" },
+      { title: "Poor Things", sub: "Yorgos Lanthimos", rating: "liked" },
+      { title: "Oppenheimer", sub: "Christopher Nolan", rating: "liked" },
+    ],
+    2023: [
+      { title: "Aftersun", sub: "Charlotte Wells", rating: "star" },
+      { title: "Everything Everywhere All at Once", sub: "Daniels", rating: "star" },
+      { title: "Tár", sub: "Todd Field", rating: "liked" },
+      { title: "The Banshees of Inisherin", sub: "Martin McDonagh", rating: "liked" },
+    ]
+  }
+};
+
+let currentTab = "books", currentFilter = "all";
+const icon = r => r === "star" ? "⭐" : "👍";
+
+function switchTab(tab, el) {
+  currentTab = tab;
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  el.classList.add("active");
+  render();
+}
+function setFilter(f, el) {
+  currentFilter = f;
+  document.querySelectorAll(".pill").forEach(p => p.classList.remove("active"));
+  el.classList.add("active");
+  render();
+}
+function render() {
+  const c = document.getElementById("shelf-content");
+  const years = Object.keys(data[currentTab]).sort((a,b) => b-a);
+  let html = "";
+  for (const yr of years) {
+    const items = data[currentTab][yr].filter(i => currentFilter === "all" || i.rating === currentFilter);
+    if (!items.length) continue;
+    html += `<div class="year-group"><div class="year-label">${yr}</div><div class="shelf-grid">`;
+    for (const item of items) {
+      html += `<div class="shelf-item">
+        <div><div class="item-title">${item.title}</div><div class="item-sub">${item.sub}</div></div>
+        <div class="rating">${icon(item.rating)}</div>
+      </div>`;
+    }
+    html += `</div></div>`;
+  }
+  c.innerHTML = html || `<p style="color:var(--muted);font-size:.9rem">Nothing here yet.</p>`;
+}
+render();
+</script>
+</body>
+</html>
