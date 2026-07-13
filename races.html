@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Races - Mohammad Saad</title>
+  <link rel="icon" href="static/img/favicon.ico" type="image/x-icon" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #777;
+      --border: #e4e4e4;
+      --accent: #0055cc;
+      --tag-bg: #f0f0f0;
+      --max: 700px;
+      --radius: 10px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 3rem 1.5rem 6rem;
+    }
+
+    main { max-width: var(--max); margin: 0 auto; }
+
+    header { margin-bottom: 2rem; }
+    .header-inner { display: flex; align-items: flex-start; gap: 1.25rem; margin-bottom: 1.25rem; }
+    .avatar {
+      width: 64px; height: 64px; border-radius: 50%;
+      flex-shrink: 0; object-fit: cover;
+    }
+    h1 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; }
+    .subtitle { color: var(--muted); font-size: 0.88rem; margin-top: 0.2rem; }
+    .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .nav-links a {
+      color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 500;
+      padding: 0.3rem 0.7rem; border-radius: 99px; background: var(--tag-bg);
+      transition: background .15s, color .15s;
+    }
+    .nav-links a:hover { background: var(--accent); color: #fff; }
+
+    .hero {
+      margin: 0 0 2.5rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+    }
+    .hero img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    section { margin-bottom: 2.75rem; }
+    h2 {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--muted); margin-bottom: 1rem;
+    }
+    p { color: #444; margin-bottom: 0.75rem; font-size: 0.93rem; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 2.25rem 0; }
+
+    .year-group { margin-bottom: 2rem; }
+    .year-heading {
+      color: var(--text);
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -0.25px;
+      margin-bottom: 0.9rem;
+    }
+    .race-list { display: flex; flex-direction: column; gap: 1.1rem; }
+    .race-item {
+      display: grid;
+      grid-template-columns: 7rem 1fr;
+      gap: 1rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .race-item:last-child { border-bottom: none; }
+    .race-date {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+    .race-type { color: var(--muted); display: block; margin-top: 0.15rem; }
+    .race-item h3 { font-size: 0.96rem; font-weight: 700; line-height: 1.35; }
+    .race-meta { color: var(--muted); font-size: 0.82rem; margin: 0.15rem 0 0.35rem; }
+    .race-note { color: #555; font-size: 0.86rem; margin: 0; }
+
+    .photo-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+    .photo-pair img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: var(--radius);
+      background: var(--tag-bg);
+    }
+
+    footer { margin-top: 4rem; font-size: 0.78rem; color: var(--muted); }
+
+    @media (max-width: 560px) {
+      body { padding: 2rem 1rem 4rem; }
+      .race-item { grid-template-columns: 1fr; gap: 0.25rem; }
+      .photo-pair { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="header-inner">
+      <img class="avatar" src="images/profile_pic_bike.jpg" alt="Mohammad Saad" />
+      <div>
+        <h1>Race Log</h1>
+        <div class="subtitle">Triathlons, running, and endurance projects.</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#resume">Resume</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img src="race_images/cherry_blossoms.jpg" alt="Cherry Blossom Run" />
+  </div>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      I did not grow up as an athlete, and only found running and cycling after college.
+      I started inconsistently, mostly as a way to get healthier and see what my body could adapt to.
+      I am still very much a recreational endurance athlete, but the process of getting a little better
+      has become one of the most grounding parts of my life.
+    </p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>Race List</h2>
+    <div id="race-log" class="race-log" aria-live="polite"></div>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>Photos</h2>
+    <div class="photo-pair">
+      <img src="images/wisconsin_running.JPG" alt="Mohammad Saad running during Ironman 70.3 Wisconsin" />
+      <img src="images/profile_pic_bike.jpg" alt="Mohammad Saad on a bike" />
+    </div>
+  </section>
+
+  <footer>Built with plain HTML &amp; CSS · Hosted on GitHub Pages</footer>
+</main>
+<script>
+const raceLog = document.getElementById("race-log");
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  }[char]));
+}
+
+function formatMeta(race) {
+  return [race.sport, race.location, race.time].filter(Boolean).map(escapeHtml).join(" · ");
+}
+
+function groupRacesByYear(races) {
+  return races.reduce((groups, race) => {
+    const year = race.year || "Earlier";
+    if (!groups.has(year)) groups.set(year, []);
+    groups.get(year).push(race);
+    return groups;
+  }, new Map());
+}
+
+function sortYears(years) {
+  return years.sort((a, b) => {
+    const aNum = Number(a);
+    const bNum = Number(b);
+    if (Number.isFinite(aNum) && Number.isFinite(bNum)) return bNum - aNum;
+    if (Number.isFinite(aNum)) return -1;
+    if (Number.isFinite(bNum)) return 1;
+    return a.localeCompare(b);
+  });
+}
+
+function renderRaces(races) {
+  const groups = groupRacesByYear(races);
+  raceLog.innerHTML = sortYears([...groups.keys()]).map(year => `
+    <div class="year-group">
+      <h3 class="year-heading">${escapeHtml(year)}</h3>
+      <div class="race-list">
+        ${groups.get(year).map(race => `
+          <article class="race-item">
+            <div class="race-date">${escapeHtml(race.date)}<span class="race-type">${escapeHtml(race.type)}</span></div>
+            <div>
+              <h3>${escapeHtml(race.name)}</h3>
+              <div class="race-meta">${formatMeta(race)}</div>
+              ${race.notes ? `<p class="race-note">${escapeHtml(race.notes)}</p>` : ""}
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    </div>
+  `).join("");
+}
+
+fetch("data/races.json")
+  .then(response => {
+    if (!response.ok) throw new Error(`Could not load races: ${response.status}`);
+    return response.json();
+  })
+  .then(renderRaces)
+  .catch(() => {
+    raceLog.innerHTML = '<p class="race-note">Race data could not be loaded.</p>';
+  });
+</script>
+</body>
+</html>
