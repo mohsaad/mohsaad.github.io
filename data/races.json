@@ -38,5 +38,75 @@
     "location": "Tempe, AZ",
     "time": "13:31:47",
     "notes": "Swim 1:24:03 Bike: 6:27:00 Run: 5:20:03"
+  },
+  {
+    "year": "2023",
+    "date": "October 15, 2023",
+    "type": "5K",
+    "name": "Snohomish River Run",
+    "sport": "Run",
+    "location": "Snohomish, WA",
+    "time": "21:24.8",
+    "notes": ""
+  }
+  {
+    "year": "2023",
+    "date": "October 8, 2023",
+    "type": "26.2",
+    "name": "Chicago Marathon",
+    "sport": "Run",
+    "location": "Chicago, IL",
+    "time": "13:31:47",
+    "notes": ""
+  },
+  {
+    "year": "2023",
+    "date": "August 27, 2023",
+    "type": "Olympic",
+    "name": "Chicago Triathlon",
+    "sport": "Triathlon",
+    "location": "Chicago, IL",
+    "time": "2:17:00",
+    "notes": "Run: 4:48 Bike 1:17:20 Run: 49:51"
+  },
+  {
+    "year": "2022",
+    "date": "December 11, 2022",
+    "type": "26.2",
+    "name": "BMW Dallas Marathon",
+    "sport": "Run",
+    "location": "Dallas, TX",
+    "time": "3:59:36",
+    "notes": ""
+  },
+  {
+    "year": "2022",
+    "date": "October 15, 2022",
+    "type": "13.1",
+    "name": "Baltimore Half-Marathon",
+    "sport": "Run",
+    "location": "Baltimore, MD",
+    "time": "1:52:18",
+    "notes": ""
+  },
+ {
+    "year": "2022",
+    "date": "October 15, 2022",
+    "type": "5K",
+    "name": "Baltimore Moron-A-Thon",
+    "sport": "Run",
+    "location": "Baltimore, MD",
+    "time": "21:14",
+    "notes": "5K pre-half marathon"
+  },
+  {
+    "year": "2022",
+    "date": "July 23, 2022",
+    "type": "13.1",
+    "name": "San Francisco Half Marathon (2nd)",
+    "sport": "Run",
+    "location": "San Francisco, CA",
+    "time": "1:46:57",
+    "notes": ""
   }
 ]
