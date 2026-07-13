@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Races - Mohammad Saad</title>
   <link rel="icon" href="static/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="static/css/theme.css" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -113,6 +114,8 @@
 
     footer { margin-top: 4rem; font-size: 0.78rem; color: var(--muted); }
 
+    body.dark .race-note { color: #999; }
+
     @media (max-width: 560px) {
       body { padding: 2rem 1rem 4rem; }
       .race-item { grid-template-columns: 1fr; gap: 0.25rem; }
@@ -170,6 +173,7 @@
 
   <footer>Built with plain HTML &amp; CSS · Hosted on GitHub Pages</footer>
 </main>
+<script src="static/js/theme-toggle.js"></script>
 <script>
 const raceLog = document.getElementById("race-log");
 
