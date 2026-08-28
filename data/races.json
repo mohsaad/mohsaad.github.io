@@ -1,6 +1,17 @@
 [
   {
     "year": "2026",
+    "date": "August 23, 2026",
+    "type": "Olympic",
+    "name": "SuperTri Chicago Triathlon",
+    "sport": "Triathlon",
+    "location": "Chicago, IL",
+    "time": "2:45:07",
+    "notes": "A new Olympic-distance PR. Swim 31:01 · Bike 1:12:17 · Run 51:26",
+    "reportUrl": "races/chicago-triathlon-2026.html"
+  },
+  {
+    "year": "2026",
     "date": "April 18, 2026",
     "type": "10K",
     "name": "Seattle Cherry Blossom Run",

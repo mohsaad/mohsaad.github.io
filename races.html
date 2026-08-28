@@ -96,6 +96,8 @@
     }
     .race-type { color: var(--muted); display: block; margin-top: 0.15rem; }
     .race-item h3 { font-size: 0.96rem; font-weight: 700; line-height: 1.35; }
+    .race-item h3 a { color: var(--text); text-decoration: none; }
+    .race-item h3 a:hover { color: var(--accent); }
     .race-meta { color: var(--muted); font-size: 0.82rem; margin: 0.15rem 0 0.35rem; }
     .race-note { color: #555; font-size: 0.86rem; margin: 0; }
 
@@ -221,7 +223,9 @@ function renderRaces(races) {
           <article class="race-item">
             <div class="race-date">${escapeHtml(race.date)}<span class="race-type">${escapeHtml(race.type)}</span></div>
             <div>
-              <h3>${escapeHtml(race.name)}</h3>
+              <h3>${race.reportUrl
+                ? `<a href="${escapeHtml(race.reportUrl)}">${escapeHtml(race.name)} →</a>`
+                : escapeHtml(race.name)}</h3>
               <div class="race-meta">${formatMeta(race)}</div>
               ${race.notes ? `<p class="race-note">${escapeHtml(race.notes)}</p>` : ""}
             </div>

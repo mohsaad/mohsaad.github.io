@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Race report from the 2026 SuperTri Chicago Triathlon, an Olympic-distance personal best in 2:45:07." />
+  <title>Chicago Triathlon 2026 Race Report - Mohammad Saad</title>
+  <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../static/css/theme.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    :root {
+      --bg: #fafafa;
+      --surface: #fff;
+      --text: #1a1a1a;
+      --body: #444;
+      --muted: #777;
+      --border: #e4e4e4;
+      --accent: #0055cc;
+      --tag-bg: #f0f0f0;
+      --max: 760px;
+      --radius: 10px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding: 3rem 1.5rem 6rem;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+    }
+    main { max-width: var(--max); margin: 0 auto; }
+    a { color: var(--accent); }
+    .site-header { margin-bottom: 3.5rem; }
+    .header-inner { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.15rem; }
+    .avatar { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
+    .site-name { margin: 0; font-size: 1rem; font-weight: 800; letter-spacing: -.01em; }
+    .site-subtitle { color: var(--muted); font-size: .82rem; }
+    .nav-links { display: flex; gap: .65rem; flex-wrap: wrap; }
+    .nav-links a {
+      padding: .28rem .68rem;
+      border-radius: 999px;
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-size: .82rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .nav-links a:hover { background: var(--accent); color: #fff; }
+
+    .eyebrow {
+      margin: 0 0 .85rem;
+      color: var(--accent);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 680px;
+      margin: 0;
+      font-size: clamp(2.45rem, 8vw, 4.6rem);
+      line-height: .98;
+      letter-spacing: -.06em;
+    }
+    .dek { max-width: 650px; margin: 1.35rem 0 1rem; color: var(--body); font-size: 1.14rem; }
+    .byline { margin: 0 0 2rem; color: var(--muted); font-size: .83rem; }
+    .pr-banner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 1.4rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    .pr-banner span { color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .pr-banner strong { font-size: clamp(2rem, 8vw, 3.25rem); line-height: 1; letter-spacing: -.04em; }
+
+    .splits {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin: 1rem 0 4rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .split { padding: .9rem .8rem; border-right: 1px solid var(--border); }
+    .split:last-child { border-right: 0; }
+    .split span { display: block; color: var(--muted); font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .split strong { display: block; margin-top: .08rem; font-size: 1rem; }
+
+    .contents {
+      margin: 0 0 4rem;
+      padding: 1.2rem 1.35rem;
+      border-left: 3px solid var(--accent);
+      background: var(--tag-bg);
+    }
+    .contents strong { display: block; margin-bottom: .45rem; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+    .contents-links { display: flex; flex-wrap: wrap; gap: .3rem 1rem; }
+    .contents a { font-size: .84rem; text-decoration: none; }
+
+    .story-section { margin: 0 0 4.5rem; scroll-margin-top: 2rem; }
+    .section-label { margin: 0 0 .25rem; color: var(--accent); font-size: .72rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+    h2 { margin: 0 0 1.35rem; font-size: 1.75rem; line-height: 1.2; letter-spacing: -.03em; }
+    h3 { margin: 2.2rem 0 .6rem; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
+    p { margin: 0 0 1rem; color: var(--body); }
+    ul { margin: .4rem 0 1.3rem; padding-left: 1.25rem; color: var(--body); }
+    li { margin-bottom: .35rem; }
+    .callout {
+      margin: 1.6rem 0;
+      padding: 1.25rem 1.35rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    .callout h3 { margin-top: 0; }
+    .callout ul { margin-bottom: 0; }
+
+    figure { margin: 2rem 0; }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+    figcaption { margin-top: .55rem; color: var(--muted); font-size: .76rem; line-height: 1.45; }
+    .chart-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .chart-pair figure { margin: 0; }
+
+    .data-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin: 1.5rem 0; }
+    .data-card { padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    .data-card span { display: block; color: var(--muted); font-size: .66rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+    .data-card strong { display: block; margin-top: .15rem; font-size: 1.2rem; }
+    .closing { padding-top: 3.5rem; border-top: 1px solid var(--border); }
+    footer { margin-top: 5rem; color: var(--muted); font-size: .78rem; }
+
+    body.dark { --body: #aaa; }
+    body.dark .site-name { color: var(--text); }
+    body.dark .eyebrow,
+    body.dark .section-label { color: var(--accent); }
+    body.dark .pr-banner,
+    body.dark .splits,
+    body.dark .callout,
+    body.dark .data-card { background: #191919; }
+    body.dark figure img { background: #fff; }
+
+    @media (max-width: 620px) {
+      body { padding: 2rem 1rem 4rem; }
+      .site-header { margin-bottom: 2.75rem; }
+      .pr-banner { align-items: flex-end; }
+      .splits { grid-template-columns: repeat(2, 1fr); }
+      .split { border-bottom: 1px solid var(--border); }
+      .split:nth-child(2n) { border-right: 0; }
+      .split:last-child { border-bottom: 0; }
+      .chart-pair, .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header class="site-header">
+    <div class="header-inner">
+      <img class="avatar" src="../images/profile_pic_bike.jpg" alt="Mohammad Saad" />
+      <div>
+        <p class="site-name">Mohammad Saad</p>
+        <div class="site-subtitle">Recreational endurance athlete</div>
+      </div>
+    </div>
+    <nav class="nav-links" aria-label="Site navigation">
+      <a href="../index.html">Home</a>
+      <a href="../races.html">Race log</a>
+      <a href="../index.html#about">About</a>
+    </nav>
+  </header>
+
+  <article>
+    <header>
+      <p class="eyebrow">Race report · Olympic triathlon</p>
+      <h1>Chicago Triathlon<br />Race Report</h1>
+      <p class="dek">I ran the 2026 SuperTri Chicago Triathlon — Olympic distance this past weekend. I set a new PR of 2:45:07 in the Olympic distance, which I’m pretty happy about.</p>
+      <p class="byline">August 23, 2026 · Chicago, Illinois</p>
+
+      <div class="pr-banner">
+        <span>Finish time · New PR</span>
+        <strong>2:45:07</strong>
+      </div>
+      <div class="splits" aria-label="Race splits">
+        <div class="split"><span>Swim</span><strong>31:01</strong></div>
+        <div class="split"><span>T1</span><strong>7:17</strong></div>
+        <div class="split"><span>Bike</span><strong>1:12:17</strong></div>
+        <div class="split"><span>T2</span><strong>3:09</strong></div>
+        <div class="split"><span>Run</span><strong>51:26</strong></div>
+      </div>
+    </header>
+
+    <nav class="contents" aria-label="Report sections">
+      <strong>On this page</strong>
+      <div class="contents-links">
+        <a href="#overview">Overview</a><a href="#lead-up">Lead-up</a><a href="#morning">Race morning</a><a href="#swim">Swim</a><a href="#t1">T1</a><a href="#bike">Bike</a><a href="#t2">T2</a><a href="#run">Run</a><a href="#data">The data</a><a href="#next">What’s next</a>
+      </div>
+    </nav>
+
+    <section class="story-section" id="overview">
+      <p class="section-label">01</p>
+      <h2>Race Overview</h2>
+      <ul>
+        <li><strong>Event:</strong> Chicago Triathlon — Olympic Distance</li>
+        <li><strong>Finish Time:</strong> 2:45:07</li>
+        <li><strong>Goals:</strong>
+          <ul>
+            <li>Swim: &lt;30min ❌</li>
+            <li>Bike: ~21mph ✅</li>
+            <li>Run: 7:30 - 8:00/mi ❌</li>
+          </ul>
+        </li>
+        <li><strong>Splits:</strong>
+          <ul>
+            <li>Swim — <strong>31:01</strong></li>
+            <li>T1 — <strong>7:17</strong></li>
+            <li>Bike — <strong>1:12:17</strong></li>
+            <li>T2 — <strong>3:09</strong></li>
+            <li>Run — <strong>51:26</strong></li>
+          </ul>
+        </li>
+      </ul>
+      <p>Overall a solidly executed race. I think I could have been a tiny bit faster in the swim and the run, but at this point it’s marginal gains.</p>
+    </section>
+
+    <section class="story-section" id="lead-up">
+      <p class="section-label">02</p>
+      <h2>Lead-Up and Goals</h2>
+      <p>Worked with my coach and Team PR Performance to prepare. Really, I ended up training more for a 70.3 than an Olympic distance — most of my workouts went up to 3-4 hours of bike riding in Z2 and 12mi of running. So really I was probably quite a bit overtrained for the Olympic distance. Was doing 12mi @ 9:00/mi pace and a 10k at 8:00 pace as my last few workouts. So felt pretty prepared for this race.</p>
+      <p>One thing I was worried about was my wheelset. I have a pair of Bontrager Aeolus wheels, but the rear wheel had been having issues — the freehub was actually just toast, and I needed to replace it with a new one. Got it repaired the day before and it was good to go, but it was a bit of stress to make sure everything worked.</p>
+      <p>I flew into Chicago on Thursday night. Didn’t sleep a whole lot in the days previous, a lot of stress and stuff going on at home at the moment. Got to Chicago, put my bike together, and rode it — felt good and fast. Dropped it off Saturday, picked up my race packet, and ate a ton of Pakistani kebabs to fuel for the next day.</p>
+      <div class="callout">
+        <h3>Some concerns:</h3>
+        <p><strong>Weather</strong></p>
+        <ul>
+          <li>There was a beach warning hazard the morning of the race, but the wind conditions ended up stabilizing enough for a pretty calm swim.</li>
+          <li>Weather was going to be cool (60deg) and humid (88% humidity). Was going to be a hot day.</li>
+          <li>Wind was expected to be from the N, starting at 3mph and ending up around 9-10mph as the day went on.</li>
+        </ul>
+        <p><strong>Nutrition</strong></p>
+        <ul>
+          <li>I hadn’t really defined a nutrition strategy going into the race, so I panic-texted my coach the night before. We worked out a strategy:
+            <ul>
+              <li>Gel before race</li>
+              <li>Gel in T1</li>
+              <li>2 packets of Mortal Hydration (800-1000mg of sodium) in a 750mL bottle</li>
+              <li>2 gels on the bike</li>
+              <li>Gel in T2</li>
+              <li>Gel halfway through the run</li>
+              <li>Water bottle with 500mg of sodium (LiquidIV in this case)</li>
+            </ul>
+          </li>
+        </ul>
+        <p>This ended up working great for me.</p>
+      </div>
+    </section>
+
+    <section class="story-section" id="morning">
+      <p class="section-label">03</p>
+      <h2>Race Morning</h2>
+      <p>Woke up at 4AM, prayed Tahajjud and Fajr, ate a bagel with cream cheese. We were, as always, running late, so I got to transition at 5:35 (10min left until transition closed). Got everything set up in time, barely remembered to put on my timing chip, but got everything ready.</p>
+      <p>Honestly, I didn’t have time to feel nervous. Felt pretty relaxed. Met up with a few friends and we all stood in line. I used the bathroom to pee. One thing I did mess up was that I had my wetsuit and swim cap on for way too long. I was sweating hard and didn’t really think about it, but I was pretty dehydrated because of it. Not a good look coming into the swim.</p>
+      <p>Water was calm and the course seems pretty cool. Swim ~400m to the Field museum, turn around, swim the rest to Monroe Harbor.</p>
+    </section>
+
+    <section class="story-section" id="swim">
+      <p class="section-label">04</p>
+      <h2>Swim — 31:01</h2>
+      <p>Jumped headfirst into the water and started swimming fast to find an open lane. Took about 200m to calm myself down and figure out where I was trying to go. Aimed for the buoys to minimize the amount of swimming. Swam pretty straight for the most part, just between buoys on the right. Not too many people in front or behind me. I breathe to my right so had a good view of the shore and where I was.</p>
+      <p>Hit the buoy and basically swam buoy to buoy until the midpoint. Nothing crazy here, I think I caught some of the slower swimmers from the previous waves and so was trying to find open lanes. The sun is also in my eyes, thankfully I had tinted goggles so I could still see.</p>
+      <p>After the midpoint, I swim closer to the shore, for the sole reason that there’s just not as many people here. I realize that now I was probably off course a little bit, but otherwise fewlt fine, just swimming a casual, not too hard pace. About 400m from the finish, I realize that there’s a cramp in both my legs, probably from sweating out a ton wearing the wetsuit. It doesn’t affect my swimming, maybe slowed me down a bit. Figured I’d just deal with it when I got out of the water.</p>
+      <p>Looking at my pacing, I basically just kept the same pace between the turnaround buoy and the end at 2:00/100yd pace. So room for improvement there. Mostly I swam pretty straight, with some issues between the midpoint and the end where I went slightly right.</p>
+      <figure>
+        <img src="../race_images/chicago-triathlon-2026/swim-pace.png" alt="Chart showing swim pace across the Chicago Triathlon course" loading="lazy" />
+      </figure>
+      <p>I also have data on my stroke rate. Seems like in the beginning I was fairly high stroke rate, and then settled down in the middle to about 64spm.</p>
+      <p>Probably things I’d think about:</p>
+      <ul>
+        <li>Getting my left arm catch to a more consistent high elbow. I don’t think my left arm propelled as much as it should</li>
+        <li>Improving my cadence and DPS quite a bit — I think the DPS could be a bit higher. Would like to get to a consistent 0.8m/stroke if possible — that requires quite a bit of effort. Here’s my current DPS graph:</li>
+      </ul>
+      <div class="chart-pair">
+        <figure>
+          <img src="../race_images/chicago-triathlon-2026/swim-stroke-rate.png" alt="Chart showing swim stroke rate" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="../race_images/chicago-triathlon-2026/swim-distance-per-stroke.png" alt="Chart showing swim distance per stroke" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-section" id="t1">
+      <p class="section-label">05</p>
+      <h2>T1 — 7:17</h2>
+      <p>Came out of the swim and immediately felt the cramp that I had gotten in both legs. I think this was because of the wetsuit and sweated a ton out. There’s like a 0.25mi run between the swim out and the transition area, and it was really painful. Walked for a bit out. tried to run, didn’t make it far, walked a bit more, saw a friend who motivated me and found some run legs.</p>
+      <p>I had a gel in transition, and I decided (very wisely) to put on some socks. I think that allowed me to calm my body down a bit and get some feeling back into my legs. I grabbed the bike and ran out to the bike out.</p>
+    </section>
+
+    <section class="story-section" id="bike">
+      <p class="section-label">06</p>
+      <h2>Bike — 1:12:17</h2>
+      <p>Got on the bike and I slowed down immediately because I couldn’t put my feet in my shoes. I had attached my shoes to my bikes in transition and I couldn’t get the flying mount on. So I wasted like 2-3 minutes trying to get my feet in my bike shoes. Should have just done it in transition.</p>
+      <p>Once I was in my shoes, I started to go for it. I sped up into the wind, going in the aero position and trying to keep my speed up. Mostly spent the time in full aero, and was passing a lot of people. I don’t really know how good my aero position is — need to do a proper race fit. But was passing almost everybody except for the elite bikers / people on triathlon bikes.</p>
+      <p>The first 7-8mi were into a headwind, but I never really felt it. Tried to average 180W for the most part, but was going very very fast — 20mph I think I averaged going into the headwind. My cadence was high too — 85-95 rpms for the most part. My HR was very elevated though. I was at mostly 175-185bpm, which is really high for my pacing. But it didn’t feel too bad — I think this was residual from the swim for the most part, and made worse by small rolling hills.</p>
+      <p>Hit the turnaround and into the tailwind, and I start speeding up even more. I hit 21mph at this point and am cruising. No issues in the world. My heart rate even comes down at this point as I relax and get into the groove. This continues until we hit the technical section in Lower Wacker.</p>
+      <p>In Lower Wacker, I feel my legs are starting to really hurt a little bit, so I back off on the power and cadence to let them recover for the run. This does mean my average speed dropped a little bit, and my cadence did as well. It was also really narrow, hard to pass people, and I did get caught up behind groups that weren’t following the drafting rules correctly. So I definitely slowed down quite a bit. I also noticed that I was pushing a slightly higher gear. I thought Lower Wacker would be better aero-wise as there’s no wind and much less air resistance, so I could push a higher gear without much effect. That didn’t really happen and my cadence dropped to the low 80s when I should have kept it much higher.</p>
+      <p>My nutrition was simple: 2 packets of mortal hydration mango, 2 precision fuel and hydration 30g carb gels, one at min 23, one at min 50. Felt pretty good stomach wise, I do wish I had some water to down the hydration with.</p>
+      <p>Overall I felt really proud of this effort. I think I never expected myself to be so smooth and aero. I’m still a bit shocked at how fast I was going despite not pushing a crazy power level. There were spots where I did put down tons of power (up a hill, out of a corner) but my average naturalized power for the entire ride was just 165W. Either I was absurdly aero or my form was just very smooth. The course definitely helped, my tri bike and aero wheels definitely helped too.</p>
+      <p>Things I think I could improve on:</p>
+      <ul>
+        <li>Fix the shoe issue. Just put the dang shoes on in transition and don’t try to running start them. Would have saved 1-2 min at the least</li>
+        <li>Keep cadence around 85-90 the entire time.</li>
+        <li>Buy an aero helmet to save like 10-20W (probably not that big a deal)</li>
+        <li>Put my water bottle in between my handlebars
+          <ul>
+            <li>My water bottle was on the seat post stem, so I had to go upright every time I wanted to drink water and suffer a small speed/power/cadence penalty. I think putting my water / hydration in a bottle either on the bottom diagonal or between the handlebars would help significantly with that, so I don’t have to stop and reach down to take some water</li>
+          </ul>
+        </li>
+        <li>Add a bottle of carb water
+          <ul><li>More for long distance races tbh. Don’t know if it’s needed for this.</li></ul>
+        </li>
+      </ul>
+
+      <div class="data-grid">
+        <div class="data-card"><span>Normalized power</span><strong>165 W</strong></div>
+        <div class="data-card"><span>Intensity factor</span><strong>0.76</strong></div>
+        <div class="data-card"><span>Avg. cadence</span><strong>84.7 rpm</strong></div>
+        <div class="data-card"><span>Variability index</span><strong>1.10</strong></div>
+        <div class="data-card"><span>Maximum power</span><strong>484 W</strong></div>
+        <div class="data-card"><span>Average HR</span><strong>168 bpm</strong></div>
+      </div>
+      <h3>Power</h3>
+      <ul>
+        <li>Average power including zeros — <strong>~149 W</strong></li>
+        <li>Average power excluding zeros — <strong>152.5 W</strong></li>
+        <li>Normalized power — <strong>~165 W</strong></li>
+        <li>Intensity Factor — <strong>~0.76</strong></li>
+        <li>Variability Index — <strong>~1.10</strong></li>
+        <li>Maximum power — <strong>484 W</strong></li>
+      </ul>
+      <figure>
+        <img src="../race_images/chicago-triathlon-2026/bike-power.png" alt="Chart showing cycling power during the race" loading="lazy" />
+      </figure>
+      <h3>Power Distribution</h3>
+      <ul>
+        <li>Significant number of short surges.</li>
+        <li>Approximately <strong>3:39 above 300 W</strong>.</li>
+      </ul>
+      <h3>Cadence</h3>
+      <ul>
+        <li>Average cadence while pedaling — <strong>~84.7 rpm</strong></li>
+        <li>Early race cadence generally around <strong>87–92 rpm</strong>.</li>
+        <li>Later race cadence dropped into approximately the <strong>77 rpm</strong> range.</li>
+        <li>First-half cadence was noticeably higher than second-half cadence.</li>
+      </ul>
+      <h3>Heart Rate</h3>
+      <p>My heart rate was really interesting. It started really high, and then went down as the race progressed, with a few spikes whenever there was a hill or a power surge. I think it was me coming out of the swim and then finding my groove as the bike race went on.</p>
+      <p><strong>Average HR: </strong>168bpm</p>
+      <div class="chart-pair">
+        <figure>
+          <img src="../race_images/chicago-triathlon-2026/bike-cadence.png" alt="Chart showing cycling cadence" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="../race_images/chicago-triathlon-2026/bike-heart-rate.png" alt="Chart showing heart rate during the bike leg" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-section" id="t2">
+      <p class="section-label">07</p>
+      <h2>T2 — 3:09</h2>
+      <p>Got out of my shoes right before the dismount line (and actually pulled it off!) Then re-racked my bike. Ate a gel, put on my run shoes, took a big swig of my water bottle, put on my race belt, and I was off. The one thing I didn’t have was a hat, which I kind of regret actually, but decided to go with it.</p>
+      <p>My legs were hurting a little bit, especially my quads post bike ride. But managed to push through it. Overall a normal transition for the most part.</p>
+    </section>
+
+    <section class="story-section" id="run">
+      <p class="section-label">08</p>
+      <h2>Run — 51:26</h2>
+      <p>Got out of transition and saw my parents and wife, cheering me on. Didn’t feel a whole ton of pain until about a half mile, and then the muscles in both legs started to really hurt. I walked for a little bit, and actually just stopped for 15 sec to try and stretch out my legs. Decided to continue pushing myself and see where I broke and continued running. The pain subsided after a mile or so, came back at mile 4, and stayed there throughout the most part. Definitely a hard first mile and then settled into a pace.</p>
+      <p>For the most part, the hard thing was the temperature and the sun bearing down. It was hot and humid, and I was definitely feeling it in my legs and body. I walked through all the aid stations and drank tons of water and electrolytes.</p>
+      <p>At mile 4 I saw a friend around 2-3 minutes behind me, running fast. I got the motivation to not get beaten again (he had pushed past me last year) and so I kept my pace up at the 8:00/mi mark. Legs are pretty toast at this point, but I tick the miles down to the end as we were past the u-turn.</p>
+      <p>At the end there’s a hill to the top of Columbus, and then it’s a downhill finish (like every Chicago race). That last hill was painful, just trying to get through to the last sprint. Made it over and down into the finishing chute, and set a new PR.</p>
+      <figure>
+        <img src="../race_images/chicago-triathlon-2026/run-pace.png" alt="Chart showing run pace during the Chicago Triathlon" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="story-section" id="data">
+      <p class="section-label">09</p>
+      <h2>What the Data Says</h2>
+      <p>I had ChatGPT analyze some of my race files, and came out with some statistics / places for improvement.</p>
+      <ul>
+        <li>At approximately <strong>165 W NP</strong> with a <strong>218 W FTP</strong>, the bike was only around <strong>76% FTP</strong>.</li>
+        <li>A <strong>VI of ~1.10</strong> suggests substantial variability.
+          <ul><li>A lot of random surges instead of a smooth pedaling cadence</li></ul>
+        </li>
+        <li>Cadence dropped from the upper 80s earlier in the race toward the upper 70s later.</li>
+      </ul>
+    </section>
+
+    <section class="story-section closing" id="next">
+      <p class="section-label">10</p>
+      <h2>What’s next</h2>
+      <p>I’m not entirely sure. I would like to improve my running form even further, to a 1:30 - 1:40 half marathon pace. That’s aggressive but I think with 3 months of dedicated run training I could do it.</p>
+      <p>Otherwise it’s really just continue working towards a better aero position and better swim technique. I think continuing to work in the pool with faster people will help me get faster by attrition.</p>
+      <p>I think I’m going to punt on triathlon races for the rest of this year due to time and calendar pressures, but preparing for next year.</p>
+    </section>
+  </article>
+
+  <footer><a href="../races.html">← Back to the race log</a> · Built with plain HTML &amp; CSS</footer>
+</main>
+<script src="../static/js/theme-toggle.js"></script>
+</body>
+</html>
