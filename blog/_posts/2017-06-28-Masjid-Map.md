@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Map of Masjids across America
 tags: [projects, islam]
 ---

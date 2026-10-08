@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Data-mining your Facebook Data
 tags: [projects]
 ---

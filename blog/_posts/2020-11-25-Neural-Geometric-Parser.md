@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: essay
 title: Paper Review &#58; Neural Geometric Parser for Single Image Camera Calibration
 description: A summary of a new method on single image camera calibration
 tags: [paper-review]
+math: true
 ---
 
 # Neural Geometric Parser for Single Image Camera Calibration

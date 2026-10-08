@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: essay
 title: Paper Review&#58; Deeper Depth Prediction using Fully Convolutional Residual Networks
 tags: [paper-review, computer-vision]
+math: true
 ---
 
 Single image depth prediction is a small but growing field of computer vision research. Normally, depth prediction is done in one of two ways:

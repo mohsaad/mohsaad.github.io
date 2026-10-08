@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: A quick SlackBot for saying hello on entering a channel
 tags: [projects, web]
 ---

@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: essay
 title: Designing a second-order analog filter
 tags: [projects]
+math: true
 ---
 
 So normally, I'm not a huge circuit person. In fact, circuits was the part

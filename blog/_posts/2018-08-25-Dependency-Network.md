@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Visualizing C++ Dependency Networks
 tags: [networks, projects]
 ---

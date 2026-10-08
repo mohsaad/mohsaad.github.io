@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: essay
 title: Paper Review&#58; Unsupervised Monocular Depth Prediction with Left-Right Consistency
 tags: [paper-review, computer-vision]
+math: true
 ---
 
 A lot of the current depth estimation algorithms that use deep learning are [feed-forward]() or [regression]() algorithms. This means that given a single image, the network will either reduce the dimensionality of the color image to create a depth image or predict a depth image based on the weights. Both of these approaches require tons of training data to get correct, as they need to refine the weights over several thousands of epochs. This paper takes an "unsupervised" approach to depth estimation. Instead of trying to estimate the depth image from a single image and regressing, Godard et al. decided to try and infer the depth map from a single image by generating another image and getting the depth map from that.

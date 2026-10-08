@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Setting up a TP-LINK WNDR3200 with Ubuntu 16.04
 tags: [tech-support]
 ---

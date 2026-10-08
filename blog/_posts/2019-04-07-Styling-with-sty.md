@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Terminal styling in Python with sty
 description: Decorating the terminal with colors in Python.
 category: articles

@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: essay
 title: Calculating where a ray intersects a cylinder
 tags: [math]
+math: true
 ---
 
 I had this problem at work, and thought I'd compile a quick tutorial for a solution to this.

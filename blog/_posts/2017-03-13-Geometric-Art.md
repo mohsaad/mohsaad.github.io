@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: essay
 title: Geometric Art
 tags: [projects]
+math: true
 ---
 
 Digging through some old Github repositories, I found an old project I had worked on in high school, where I generated some pretty shapes.

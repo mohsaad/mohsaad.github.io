@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: essay
 title: Camera Calibration
 tags: [tutorials]
+math: true
 ---
 This is the first of a two-part series on camera calibration, which I relearned all about during the last few days.
 

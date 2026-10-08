@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Photographing the Blood Moon
 tags: [photography]
 ---

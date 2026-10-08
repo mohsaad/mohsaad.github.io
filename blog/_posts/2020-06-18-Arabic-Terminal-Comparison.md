@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Comparing rendered Arabic in various terminal emulators
 description: Finding a good terminal for writing Arabic in vim
 tags: ['arabic', 'bash']

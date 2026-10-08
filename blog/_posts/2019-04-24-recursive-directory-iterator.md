@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Recursive Directory Iterator
 description: A quick tutorial on boost's recursive directory iterator.
 category: articles

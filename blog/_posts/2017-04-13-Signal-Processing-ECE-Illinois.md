@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Signal Processing @ ECE Illinois
 tags: [college]
 ---

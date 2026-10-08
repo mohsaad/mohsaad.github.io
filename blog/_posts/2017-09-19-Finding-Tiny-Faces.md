@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: essay
 title: Paper Review&#58; Finding Tiny Faces
 tags: [computer-vision, paper-review]
+math: true
 ---
 
 ![TinyFace](http://www.cmu.edu/news/stories/archives/2017/march/images/tinyfaces-centipede_853x480-min.jpg)

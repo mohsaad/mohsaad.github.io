@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Always redirecting to https in Nginx
 description: "Fixing an issue I've had for a while."
 category: articles

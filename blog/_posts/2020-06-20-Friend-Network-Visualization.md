@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Visualizing networks of Facebook friends
 description: Can we visualize our own friend network?
 tags: ['projects']

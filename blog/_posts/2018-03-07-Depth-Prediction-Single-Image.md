@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Summary of Single Image Depth Prediction Papers
 tags: [paper-review, computer-vision, tutorials]
 ---

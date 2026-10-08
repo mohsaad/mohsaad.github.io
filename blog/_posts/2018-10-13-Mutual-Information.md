@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: essay
 title: Paper Review&#58; Automatic Targetless Extrinsic Calibration of a 3D Lidar and Camera by Maximizing Mutual Information
 tags: [paper-review, computer-vision]
+math: true
 ---
 $$\DeclareMathOperator*{\argmax}{arg\,max}$$
 

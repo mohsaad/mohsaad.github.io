@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Setting up ROS on Ubuntu 16.04 with OpenCV 2.4.13
 tags: [tutorials]
 ---

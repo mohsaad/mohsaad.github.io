@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: essay
 title: Git Hashing in CMake
 tags: [programming]
 ---

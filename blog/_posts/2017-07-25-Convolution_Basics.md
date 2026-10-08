@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: essay
 title: Convolution - the basics
 tags: [tutorials]
+math: true
 ---
 
 I've been studying convolutional neural networks for a while, and thought it'd be nice to brush

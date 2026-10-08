@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: essay
 title: What does a neural net think your Pokemon is?
 tags: [projects]
+math: true
 ---
 
 I've always had an obsession with the game Pokemon, and I played it obsessively as a kid. They also had a pretty cool show that would host a Pokedex, a device which could recognize Pokemon by pointing a camera at it. With my growing up (and a deeper understanding of neural networks, the thing that powers most AI engines today) I was convinced to try to build one.
