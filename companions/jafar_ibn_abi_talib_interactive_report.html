@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jafar Ibn Abi Talib (ra): Flying In Paradise — Interactive Report</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Amiri for Arabic typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                            950: '#022c22',
+                        },
+                        amber: {
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            950: '#451a03',
+                        },
+                        navy: {
+                            800: '#0f172a',
+                            900: '#0b1120',
+                            950: '#050914',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .pattern-bg {
+            background-color: #050914;
+            background-image: radial-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-3px);
+            border-color: rgba(16, 185, 129, 0.35);
+            box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.25);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050914;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #065f46;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981;
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-200 font-sans antialiased pattern-bg min-h-screen selection:bg-emerald-500 selection:text-white pb-16">
+
+    <nav class="sticky top-0 z-50 glass-card border-b border-slate-800/80 px-4 lg:px-8 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-amber-500 flex items-center justify-center shadow-lg shadow-emerald-900/40">
+                    <i data-lucide="feather" class="w-5 h-5 text-navy-950 stroke-[2.5]"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-lg text-white tracking-wide block leading-none">JAFAR IBN ABI TALIB</span>
+                    <span class="text-xs text-emerald-400 font-medium tracking-wider uppercase">Interactive Visual Explainer</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-6 text-xs font-semibold uppercase tracking-wider">
+                <a href="#video-section" class="text-slate-300 hover:text-emerald-400 transition-colors">Video Player</a>
+                <a href="#speech-hub" class="text-slate-300 hover:text-emerald-400 transition-colors">Speeches & Migrations</a>
+                <a href="#family-tree" class="text-slate-300 hover:text-emerald-400 transition-colors">Family Lineage</a>
+                <a href="#timeline" class="text-slate-300 hover:text-emerald-400 transition-colors">Life Timeline</a>
+                <a href="#virtues" class="text-slate-300 hover:text-emerald-400 transition-colors">Virtues & Lessons</a>
+            </div>
+
+            <a href="#video-section" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg transition-all shadow-md shadow-emerald-900/50 flex items-center space-x-2">
+                <i data-lucide="play-circle" class="w-4 h-4"></i>
+                <span>Video Player</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative pt-10 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 left-1/4 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-medium mb-5 backdrop-blur-md">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+            <span>Interactive Report for Dr. Omar Suleiman's "Firsts" Episode</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight mb-3">
+            Jafar Ibn Abi Talib <span class="text-emerald-400 text-2xl sm:text-4xl block sm:inline font-normal">(رضي الله عنه)</span>
+        </h1>
+        <p class="text-xl sm:text-2xl font-bold gold-gradient-text tracking-wide mb-4">
+            "Flying In Paradise" — <span class="font-arabic text-amber-300">جعفر الطيّار</span>
+        </p>
+
+        <p class="max-w-3xl mx-auto text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+            The Leader of the Abyssinian Migrations, the Father of the Poor (<em>Abu al-Masakin</em>), and the noble companion who resembled Prophet Muhammad ﷺ in both physical form and character.
+        </p>
+    </header>
+
+    <section id="video-section" class="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="glass-card rounded-3xl p-4 sm:p-6 border border-emerald-500/30 shadow-2xl relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                
+                <!-- Player Container -->
+                <div class="lg:col-span-8">
+                    <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-black shadow-inner border border-slate-800">
+                        <div id="yt-player" class="w-full h-full"></div>
+                    </div>
+                </div>
+
+                <!-- Live Status & Timestamp Jump Panel -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="bg-navy-900/90 p-5 rounded-2xl border border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Player Controller</span>
+                            <span id="player-status-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-800 text-slate-400 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-slate-500"></span>
+                                Ready
+                            </span>
+                        </div>
+
+                        <div>
+                            <span class="text-xs text-slate-400 block mb-1">Active Chapter:</span>
+                            <div id="active-chapter-title" class="font-bold text-white text-sm leading-snug">
+                                00:00 - Lineage & Early Life in Makkah
+                            </div>
+                        </div>
+
+                        <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                            <span>Time: <strong id="current-time-display" class="text-emerald-400">00:00</strong></span>
+                            <span>ID: <code class="text-amber-400">8zgZ09HkY54</code></span>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-950/20 p-4 rounded-2xl border border-amber-500/30 text-xs leading-relaxed space-y-2 text-slate-300">
+                        <div class="flex items-center space-x-2 text-amber-400 font-bold">
+                            <i data-lucide="external-link" class="w-4 h-4 shrink-0"></i>
+                            <span>Direct Video Jump Links</span>
+                        </div>
+                        <p>
+                            Clicking any <span class="text-emerald-400 font-semibold">"Play Here"</span> button below seeking time via JS API. Alternatively, use <span class="text-amber-300 font-semibold">"YouTube ↗"</span> to open directly at the timestamp.
+                        </p>
+                        <a id="direct-yt-btn" href="https://www.youtube.com/watch?v=8zgZ09HkY54" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1 text-emerald-400 hover:text-emerald-300 font-bold underline pt-1">
+                            <span>Open lecture on YouTube</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="speech-hub" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+        <div class="text-center mb-10">
+            <span class="text-emerald-400 text-xs font-extrabold uppercase tracking-widest block mb-1">Interactive Hub</span>
+            <h2 class="text-3xl font-extrabold text-white mb-3">Abyssinian Speeches & Migration Analysis</h2>
+            <p class="text-slate-400 text-sm max-w-2xl mx-auto">
+                Explore Jafar's (ra) landmark speech before King Negus (Al-Najashi) and a comparative matrix of early Islamic migrations.
+            </p>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="flex justify-center mb-8">
+            <div class="inline-flex p-1.5 rounded-2xl bg-navy-900 border border-slate-800 gap-2">
+                <button id="tab-btn-speech" onclick="switchHubTab('speech')" class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-emerald-600 text-white shadow-md flex items-center space-x-2">
+                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                    <span>Jafar's Speech Before Negus</span>
+                </button>
+                <button id="tab-btn-migrations" onclick="switchHubTab('migrations')" class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-400 hover:text-white hover:bg-slate-800/60 flex items-center space-x-2">
+                    <i data-lucide="compass" class="w-4 h-4"></i>
+                    <span>Migrations Comparison Matrix</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Tab 1: Speeches Interactive Viewer -->
+        <div id="tab-speech-content" class="space-y-8">
+            
+            <!-- Conflict Setup Card -->
+            <div class="glass-card rounded-2xl p-6 border border-slate-800 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div class="space-y-3">
+                    <div class="inline-block px-2.5 py-1 rounded bg-red-950/80 border border-red-500/40 text-red-300 text-xs font-bold uppercase">
+                        The Quraysh Extradition Effort
+                    </div>
+                    <h3 class="text-xl font-bold text-white">The Challenge & Extradition Demand</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Quraysh dispatched <strong>Amr ibn al-As</strong> and <strong>Abdullah ibn Abi Rabi'ah</strong> loaded with lavish gifts for Negus and his bishops. They argued that the Muslim refugees had abandoned their ancestral pagan faith for an invented religion and demanded their immediate deportation back to Makkah.
+                    </p>
+                    <div class="flex items-center space-x-3 text-xs pt-1">
+                        <button onclick="playAtTimestamp(1046, '17:26 - Quraysh Envoy to Abyssinia')" class="text-emerald-400 font-bold flex items-center space-x-1 hover:underline">
+                            <i data-lucide="play-circle" class="w-4 h-4"></i>
+                            <span>Watch lecture @ 17:26</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-navy-900/90 p-5 rounded-xl border border-slate-800 text-xs space-y-3">
+                    <h4 class="font-bold text-amber-400 uppercase tracking-wider text-[11px]">Quraysh Argument to Negus:</h4>
+                    <p class="italic text-slate-300">
+                        "O King, foolish youths from our people have taken refuge in your land. They have left our religion and have not entered yours, but invented a religion unknown to us or you. Our noble elders have sent us to request their return."
+                    </p>
+                    <div class="text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+                        <strong class="text-white">Jafar's Counter Strategy:</strong> Request an open, fair hearing and present Islam as a moral transformation rather than a political rebellion.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jafar's Primary Speech Breakdown -->
+            <div class="glass-card rounded-2xl p-6 sm:p-8 border border-emerald-500/30">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-slate-800 pb-4 mb-6 gap-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Historic Address</span>
+                        <h3 class="text-2xl font-bold text-white">Jafar's Defense Before King Negus</h3>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="playAtTimestamp(1525, '25:25 - Jafar\'s Speech Before Negus')" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-3 py-2 rounded-lg transition-all flex items-center space-x-1.5 shadow">
+                            <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                            <span>Play Chapter @ 25:25</span>
+                        </button>
+                        <a href="https://www.youtube.com/watch?v=8zgZ09HkY54&t=1525s" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-amber-400 text-xs font-bold px-3 py-2 rounded-lg transition-all border border-slate-700 flex items-center space-x-1">
+                            <span>YouTube</span>
+                            <i data-lucide="external-link" class="w-3 h-3"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Arabic & English Speech Block -->
+                <div class="bg-navy-950 p-6 rounded-2xl border border-slate-800 mb-8 space-y-4">
+                    <p class="font-arabic text-right text-lg sm:text-2xl text-amber-300 leading-loose" dir="rtl">
+                        « أَيُّهَا الْمَلِكُ، كُنَّا قَوْماً أَهْلَ جَاهِلِيَّةٍ: نَعْبُدُ الأَصْنَامَ، وَنَأْكُلُ الْمَيْتَةَ، وَنَأْتِي الْفَوَاحِشَ، وَنَقْطَعُ الأَرْحَامَ، وَنُسِيءُ الْجِوَارَ... حَتَّى بَعَثَ اللهُ إِلَيْنَا رَسُولاً مِنَّا نَعْرِفُ نَسَبَهُ وَصِدْقَهُ وَأَمَانَتَهُ وَعَفَافَهُ »
+                    </p>
+                    <p class="text-xs sm:text-sm text-slate-200 leading-relaxed italic border-t border-slate-800/80 pt-4">
+                        "O King! We were a people steeped in ignorance (Jahiliyyah): worshipping idols, eating carrion, committing abomination, severing family ties, and mistreating neighbors... until Allah sent to us an Apostle from among us, whose lineage, truthfulness, trustworthiness, and chastity we knew well."
+                    </p>
+                </div>
+
+                <!-- 4 Strategic Rhetorical Themes -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-navy-900/80 p-4 rounded-xl border border-slate-800">
+                        <div class="text-amber-400 text-xs font-bold uppercase mb-1">Theme 1: Monotheism</div>
+                        <h4 class="font-bold text-white text-sm mb-1">Pure Tawheed</h4>
+                        <p class="text-[11px] text-slate-400 leading-normal">
+                            Leaving stone worship to worship the One true God without partners.
+                        </p>
+                    </div>
+
+                    <div class="bg-navy-900/80 p-4 rounded-xl border border-slate-800">
+                        <div class="text-emerald-400 text-xs font-bold uppercase mb-1">Theme 2: Ethics</div>
+                        <h4 class="font-bold text-white text-sm mb-1">Moral Transformation</h4>
+                        <p class="text-[11px] text-slate-400 leading-normal">
+                            Truthfulness, honesty, keeping family ties (<em>Silat al-Rahim</em>), and protecting neighbors.
+                        </p>
+                    </div>
+
+                    <div class="bg-navy-900/80 p-4 rounded-xl border border-slate-800">
+                        <div class="text-cyan-400 text-xs font-bold uppercase mb-1">Theme 3: Jesus & Mary</div>
+                        <h4 class="font-bold text-white text-sm mb-1">Surah Maryam Recitation</h4>
+                        <p class="text-[11px] text-slate-400 leading-normal">
+                            Recited the opening verses of Surah Maryam, moving King Negus and his bishops to tears.
+                        </p>
+                    </div>
+
+                    <div class="bg-navy-900/80 p-4 rounded-xl border border-slate-800">
+                        <div class="text-indigo-400 text-xs font-bold uppercase mb-1">Theme 4: Diplomacy</div>
+                        <h4 class="font-bold text-white text-sm mb-1">Respect for Justice</h4>
+                        <p class="text-[11px] text-slate-400 leading-normal">
+                            Highlighted Negus's reputation: <em>"A king in whose land no one is wronged."</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tab 2: Migration Matrix -->
+        <div id="tab-migrations-content" class="hidden">
+            <div class="glass-card rounded-2xl p-6 border border-slate-800 overflow-x-auto">
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="bg-navy-900 uppercase text-[10px] tracking-wider text-emerald-400 border-b border-slate-800">
+                        <tr>
+                            <th class="p-3">Migration Phase</th>
+                            <th class="p-3">Year & Date</th>
+                            <th class="p-3">Key Leaders / Participants</th>
+                            <th class="p-3">Primary Motive</th>
+                            <th class="p-3">Royal / Regional Reception</th>
+                            <th class="p-3">Historical Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/60 font-sans">
+                        <tr class="hover:bg-slate-900/50 transition-colors">
+                            <td class="p-3 font-bold text-white">First Migration to Abyssinia</td>
+                            <td class="p-3 font-mono text-amber-300">615 CE (5th Year of Prophethood)</td>
+                            <td class="p-3 text-slate-200">Uthman ibn Affan (ra), Ruqayyah (ra) + 11 Men, 4 Women</td>
+                            <td class="p-3">Escape intense persecution from Quraysh in Makkah.</td>
+                            <td class="p-3">Welcomed warmly by King Negus as peaceful refugees.</td>
+                            <td class="p-3">Established first safe haven; returned temporarily upon false rumor of peace.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-900/50 transition-colors bg-emerald-950/10">
+                            <td class="p-3 font-bold text-emerald-300 flex items-center space-x-1.5">
+                                <span>Second Migration to Abyssinia</span>
+                                <span class="bg-emerald-500/20 text-emerald-300 text-[9px] px-1.5 py-0.5 rounded font-mono">Jafar's Phase</span>
+                            </td>
+                            <td class="p-3 font-mono text-amber-300">616 CE (6th Year of Prophethood)</td>
+                            <td class="p-3 text-slate-200">Led by Jafar ibn Abi Talib (ra) & Asma bint Umays (~83 Men, 18 Women)</td>
+                            <td class="p-3">Long-term sanctuary & diplomatic base for Islam.</td>
+                            <td class="p-3">Negus refused Quraysh bribes; granted perpetual protection & embraced Islam.</td>
+                            <td class="p-3">12 years of community stability; Jafar served as chief ambassador.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-900/50 transition-colors">
+                            <td class="p-3 font-bold text-white">Migration to Madinah (Reunion)</td>
+                            <td class="p-3 font-mono text-amber-300">628 CE (7 AH - Battle of Khaybar)</td>
+                            <td class="p-3 text-slate-200">Jafar (ra) & Abyssinian Muslims aboard ships arranged by Negus</td>
+                            <td class="p-3">Rejoining Prophet Muhammad ﷺ after Islam's position stabilized in Madinah.</td>
+                            <td class="p-3">Prophet ﷺ embraced Jafar and kissed his forehead in intense joy.</td>
+                            <td class="p-3">Famous quote: <em>"I do not know what makes me happier: the victory at Khaybar or the arrival of Jafar!"</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="family-tree" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
+        <div class="text-center mb-12">
+            <span class="text-amber-400 text-xs font-extrabold uppercase tracking-widest block mb-1">Banu Hashim Dynasty</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">Noble Lineage & Household Tree</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base">
+                Explore Jafar's (ra) immediate family, his siblings, his remarkable wife Asma bint Umays (ra), and their children.
+            </p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl relative overflow-hidden">
+            
+            <!-- Grandfather -->
+            <div class="flex flex-col items-center mb-6">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-1">Grandfather (Chief of Quraysh)</span>
+                <div class="glass-card p-4 px-8 rounded-2xl border border-amber-500/40 text-center shadow-lg bg-gradient-to-b from-slate-900 to-navy-950">
+                    <h3 class="font-extrabold text-amber-300 text-xl">Abdul Muttalib</h3>
+                    <p class="text-xs text-slate-400">Shaiba ibn Hashim</p>
+                </div>
+            </div>
+
+            <div class="w-0.5 h-6 bg-gradient-to-b from-amber-500/50 to-emerald-500/50 mx-auto mb-4"></div>
+
+            <!-- Parents -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-8">
+                <div class="glass-card p-4 rounded-2xl border border-emerald-500/30 text-center">
+                    <span class="text-[10px] font-semibold text-emerald-400 uppercase tracking-wider block mb-1">Father</span>
+                    <h4 class="text-lg font-bold text-white">Abu Talib ibn Abd al-Muttalib</h4>
+                    <p class="text-xs text-slate-400">Leader of Banu Hashim & Protector of the Prophet ﷺ</p>
+                </div>
+                <div class="glass-card p-4 rounded-2xl border border-emerald-500/30 text-center">
+                    <span class="text-[10px] font-semibold text-emerald-400 uppercase tracking-wider block mb-1">Mother</span>
+                    <h4 class="text-lg font-bold text-white">Fatima bint Asad (ra)</h4>
+                    <p class="text-xs text-slate-400">Pious mother figure to Prophet Muhammad ﷺ</p>
+                </div>
+            </div>
+
+            <!-- Siblings -->
+            <div class="border-t border-slate-800/80 pt-6 mb-8">
+                <span class="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 block">
+                    The Four Sons of Abu Talib (Each separated by 10 years)
+                </span>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto">
+                    <!-- Talib -->
+                    <div class="glass-card p-3 rounded-xl border border-slate-800 text-center">
+                        <span class="text-[10px] text-slate-500 block mb-0.5">Eldest</span>
+                        <h5 class="font-bold text-white text-sm">Talib</h5>
+                        <p class="text-[10px] text-slate-400 mt-0.5">Eldest brother</p>
+                    </div>
+
+                    <!-- Aqeel -->
+                    <div class="glass-card p-3 rounded-xl border border-slate-800 text-center">
+                        <span class="text-[10px] text-slate-400 block mb-0.5">+10 yrs</span>
+                        <h5 class="font-bold text-white text-sm">Aqeel (ra)</h5>
+                        <p class="text-[10px] text-slate-400 mt-0.5">Master genealogist</p>
+                    </div>
+
+                    <!-- JAFAR (Highlighted Focus) -->
+                    <div class="bg-gradient-to-b from-emerald-900 to-emerald-950 p-3.5 rounded-xl border-2 border-emerald-400 text-center shadow-lg shadow-emerald-900/50">
+                        <span class="text-[9px] bg-amber-400 text-navy-950 font-extrabold px-1.5 py-0.5 rounded uppercase block w-max mx-auto mb-1">Focus</span>
+                        <h5 class="font-extrabold text-white text-base">Jafar (ra)</h5>
+                        <p class="text-[10px] text-emerald-300 mt-0.5">Abu al-Masakin</p>
+                    </div>
+
+                    <!-- Ali -->
+                    <div class="glass-card p-3 rounded-xl border border-emerald-500/30 text-center">
+                        <span class="text-[10px] text-emerald-400 block mb-0.5">+10 yrs</span>
+                        <h5 class="font-bold text-white text-sm">Ali (ra)</h5>
+                        <p class="text-[10px] text-slate-300 mt-0.5">4th Caliph</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Household: Spouse & Sons -->
+            <div class="border-t border-slate-800/80 pt-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-5 glass-card p-5 rounded-2xl border border-amber-500/30 bg-amber-950/10">
+                        <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider block mb-1">Noble Spouse</span>
+                        <h4 class="text-xl font-bold text-white mb-2">Asma bint Umays (ra)</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                            A legendary scholar and companion. Migrated to Abyssinia & Madinah. After Jafar's martyrdom, she married Abu Bakr (ra), and later Ali (ra).
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider block mb-2">
+                            Sons of Jafar & Asma
+                        </span>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div class="glass-card p-3.5 rounded-xl border border-slate-800">
+                                <h5 class="font-bold text-white text-sm mb-1">Abdullah ibn Jafar</h5>
+                                <p class="text-[11px] text-slate-400">First Muslim child born in Abyssinia. Famous for immense charity (<em>Jawad al-Islam</em>).</p>
+                            </div>
+                            <div class="glass-card p-3.5 rounded-xl border border-slate-800">
+                                <h5 class="font-bold text-white text-sm mb-1">Muhammad ibn Jafar</h5>
+                                <p class="text-[11px] text-slate-400">Born in Abyssinia; raised under the affection of Prophet Muhammad ﷺ.</p>
+                            </div>
+                            <div class="glass-card p-3.5 rounded-xl border border-slate-800">
+                                <h5 class="font-bold text-white text-sm mb-1">Awn ibn Jafar</h5>
+                                <p class="text-[11px] text-slate-400">Embraced and prayed for by the Prophet ﷺ following Mu'tah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="timeline" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
+        <div class="text-center mb-12">
+            <span class="text-emerald-400 text-xs font-extrabold uppercase tracking-widest block mb-1">Chronological Epochs</span>
+            <h2 class="text-3xl font-extrabold text-white mb-3">Interactive Life Timeline</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">
+                Key milestones in Jafar's (ra) life with direct video jumps to Dr. Omar Suleiman's lecture.
+            </p>
+        </div>
+
+        <div class="relative border-l-2 border-emerald-500/30 ml-4 md:ml-32 space-y-8 pl-6 md:pl-8">
+            
+            <!-- Epoch 1 -->
+            <div class="relative group">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-navy-950"></div>
+                <div class="md:absolute md:-left-36 md:top-1.5 text-xs font-mono font-bold text-amber-400 mb-1 md:mb-0">
+                    588 - 610 CE
+                </div>
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-slate-800">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-white">Youth in Makkah & Adoption by Al-Abbas</h3>
+                        <button onclick="playAtTimestamp(0, '00:00 - Lineage & Early Life in Makkah')" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold flex items-center space-x-1">
+                            <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                            <span>Watch @ 00:00</span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        During a severe drought in Makkah, the Prophet ﷺ took Ali (ra) into his household, while his uncle Al-Abbas took Jafar to ease Abu Talib's financial hardship.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Epoch 2 -->
+            <div class="relative group">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-navy-950"></div>
+                <div class="md:absolute md:-left-36 md:top-1.5 text-xs font-mono font-bold text-amber-400 mb-1 md:mb-0">
+                    613 CE
+                </div>
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-slate-800">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-white">Early Conversion & Prayer Behind the Prophet ﷺ</h3>
+                        <button onclick="playAtTimestamp(525, '08:45 - Keeping Ties of Kinship')" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold flex items-center space-x-1">
+                            <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                            <span>Watch @ 08:45</span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Embraced Islam early alongside Asma bint Umays. When Abu Talib saw the Prophet ﷺ and Ali praying, he instructed Jafar: <em>"Join your cousin!"</em> and Jafar immediately prayed on his left.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Epoch 3 -->
+            <div class="relative group">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-navy-950"></div>
+                <div class="md:absolute md:-left-36 md:top-1.5 text-xs font-mono font-bold text-amber-400 mb-1 md:mb-0">
+                    616 - 628 CE
+                </div>
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-slate-800">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-white">12 Years in Abyssinia & Leadership</h3>
+                        <button onclick="playAtTimestamp(1726, '17:26 - The Abyssinia Migration')" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold flex items-center space-x-1">
+                            <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                            <span>Watch @ 17:26</span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Led the Muslim refugees in Abyssinia for 12 years, serving as the official ambassador of Islam, building a thriving, peaceful community under King Negus's protection.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Epoch 4 -->
+            <div class="relative group">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-navy-950"></div>
+                <div class="md:absolute md:-left-36 md:top-1.5 text-xs font-mono font-bold text-amber-400 mb-1 md:mb-0">
+                    628 CE (7 AH)
+                </div>
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-slate-800">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-white">Return at Khaybar & "Father of the Poor"</h3>
+                        <button onclick="playAtTimestamp(2649, '44:09 - Father of the Poor')" class="text-xs text-emerald-400 hover:text-emerald-300 font-bold flex items-center space-x-1">
+                            <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                            <span>Watch @ 44:09</span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Rejoined the Prophet ﷺ during Khaybar. In Madinah, Jafar devoted himself to feeding the impoverished companions of Ahlu al-Suffah, earning the title <em>Abu al-Masakin</em>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Epoch 5 -->
+            <div class="relative group">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-red-500 border-4 border-navy-950"></div>
+                <div class="md:absolute md:-left-36 md:top-1.5 text-xs font-mono font-bold text-red-400 mb-1 md:mb-0">
+                    629 CE (8 AH)
+                </div>
+                <div class="glass-card glass-card-hover p-5 rounded-2xl border border-red-500/30">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                        <h3 class="text-lg font-bold text-white">Battle of Mu'tah & Emerald Wings in Paradise</h3>
+                        <button onclick="playAtTimestamp(3165, '52:45 - Battle of Mu\'tah & Flying in Paradise')" class="text-xs text-red-400 hover:text-red-300 font-bold flex items-center space-x-1">
+                            <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                            <span>Watch @ 52:45</span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Appointed second commander at Mu'tah after Zayd ibn Harithah (ra). Refused to drop the Muslim banner even after both arms were severed. Martyrdom at age 40; the Prophet ﷺ revealed Allah granted him two emerald wings to fly through Paradise (<em>Ja'far al-Tayyar</em>).
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="virtues" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
+        <div class="text-center mb-12">
+            <span class="text-amber-400 text-xs font-extrabold uppercase tracking-widest block mb-1">Character & Impact</span>
+            <h2 class="text-3xl font-extrabold text-white mb-3">Core Virtues & Modern Lessons</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">
+                Three defining attributes of Jafar (ra) and their timeless practical applications.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Virtue 1 -->
+            <div class="glass-card p-6 rounded-2xl border border-amber-500/30 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-[10px] text-amber-400 font-mono uppercase font-bold tracking-wider">Virtue 1</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Silat al-Rahim (Kinship Ties)</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Maintained absolute family devotion without envy or rivalry. Prophet Muhammad ﷺ told him: <em>"Ashbahta khalqi wa khuluqi"</em> (You resemble me in physical form and moral character).
+                    </p>
+                </div>
+                <div class="pt-3 border-t border-slate-800 text-[11px] text-amber-300/80 italic">
+                    Lesson: Preserve family unity and love relatives unconditionally across distances.
+                </div>
+            </div>
+
+            <!-- Virtue 2 -->
+            <div class="glass-card p-6 rounded-2xl border border-emerald-500/30 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+                        <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-[10px] text-emerald-400 font-mono uppercase font-bold tracking-wider">Virtue 2</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Abu al-Masakin (Father of Poor)</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Abu Hurairah (ra) called him the most generous person to the poor. He would scrape open leather butter jars to ensure the destitute companions of Suffah had food.
+                    </p>
+                </div>
+                <div class="pt-3 border-t border-slate-800 text-[11px] text-emerald-300/80 italic">
+                    Lesson: Share whatever little you possess with warmth, dignity, and personal care.
+                </div>
+            </div>
+
+            <!-- Virtue 3 -->
+            <div class="glass-card p-6 rounded-2xl border border-cyan-500/30 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4">
+                        <i data-lucide="feather" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-[10px] text-cyan-400 font-mono uppercase font-bold tracking-wider">Virtue 3</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Dhul-Janahayni (Two Wings)</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        For sacrificing both arms holding the banner of Islam at Mu'tah, Allah replaced them with two ruby and emerald wings in Paradise (<em>Ja'far al-Tayyar</em>).
+                    </p>
+                </div>
+                <div class="pt-3 border-t border-slate-800 text-[11px] text-cyan-300/80 italic">
+                    Lesson: Sincere sacrifice for truth is compensated with eternal honor and freedom.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="border-t border-slate-800 py-8 px-4 text-center text-slate-500 text-xs max-w-7xl mx-auto">
+        <p class="mb-2">Interactive Visual Companion for <span class="text-slate-300 font-semibold">Dr. Omar Suleiman's Lecture</span></p>
+        <p>Lecture Title: <em>Jafar Ibn Abi Talib (ra): Flying In Paradise | The Firsts</em> — Video ID: <code class="bg-slate-900 px-2 py-0.5 rounded text-amber-400">8zgZ09HkY54</code></p>
+    </footer>
+
+    <script>
+        let player = null;
+        let isPlayerReady = false;
+
+        // Dynamically load YouTube Iframe API
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('yt-player', {
+                videoId: '8zgZ09HkY54',
+                playerVars: {
+                    'playsinline': 1,
+                    'rel': 0,
+                    'modestbranding': 1
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            isPlayerReady = true;
+            updateStatusBadge('Ready', 'emerald');
+            
+            // Monitor timestamp clock
+            setInterval(() => {
+                if (player && player.getCurrentTime) {
+                    const currentTime = Math.floor(player.getCurrentTime());
+                    const minutes = Math.floor(currentTime / 60).toString().padStart(2, '0');
+                    const seconds = (currentTime % 60).toString().padStart(2, '0');
+                    const timeElem = document.getElementById('current-time-display');
+                    if (timeElem) timeElem.textContent = `${minutes}:${seconds}`;
+                }
+            }, 1000);
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                updateStatusBadge('Playing', 'emerald');
+            } else if (event.data == YT.PlayerState.PAUSED) {
+                updateStatusBadge('Paused', 'amber');
+            } else if (event.data == YT.PlayerState.ENDED) {
+                updateStatusBadge('Ended', 'slate');
+            }
+        }
+
+        function updateStatusBadge(text, color) {
+            const badge = document.getElementById('player-status-badge');
+            if (!badge) return;
+            
+            let colorClasses = 'bg-emerald-950 text-emerald-400 border border-emerald-500/30';
+            if (color === 'amber') colorClasses = 'bg-amber-950 text-amber-400 border border-amber-500/30';
+            if (color === 'slate') colorClasses = 'bg-slate-800 text-slate-400 border border-slate-700';
+
+            badge.className = `px-2.5 py-0.5 rounded-full text-[11px] font-bold flex items-center gap-1.5 ${colorClasses}`;
+            badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-current"></span> ${text}`;
+        }
+
+        // Seek video to specific timestamp
+        function playAtTimestamp(seconds, title) {
+            const titleElem = document.getElementById('active-chapter-title');
+            if (titleElem) titleElem.textContent = title;
+
+            const directBtn = document.getElementById('direct-yt-btn');
+            if (directBtn) {
+                directBtn.href = `https://www.youtube.com/watch?v=8zgZ09HkY54&t=${seconds}s`;
+            }
+
+            if (player && isPlayerReady && typeof player.seekTo === 'function') {
+                player.seekTo(seconds, true);
+                player.playVideo();
+                document.getElementById('video-section').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.open(`https://www.youtube.com/watch?v=8zgZ09HkY54&t=${seconds}s`, '_blank');
+            }
+        }
+
+        // Switch between Abyssinia Speech and Migration Matrix tabs
+        function switchHubTab(tabName) {
+            const speechTabBtn = document.getElementById('tab-btn-speech');
+            const migrationsTabBtn = document.getElementById('tab-btn-migrations');
+            const speechContent = document.getElementById('tab-speech-content');
+            const migrationsContent = document.getElementById('tab-migrations-content');
+
+            if (tabName === 'speech') {
+                speechTabBtn.className = 'px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-emerald-600 text-white shadow-md flex items-center space-x-2';
+                migrationsTabBtn.className = 'px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-400 hover:text-white hover:bg-slate-800/60 flex items-center space-x-2';
+                speechContent.classList.remove('hidden');
+                migrationsContent.classList.add('hidden');
+            } else {
+                migrationsTabBtn.className = 'px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-emerald-600 text-white shadow-md flex items-center space-x-2';
+                speechTabBtn.className = 'px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all text-slate-400 hover:text-white hover:bg-slate-800/60 flex items-center space-x-2';
+                migrationsContent.classList.remove('hidden');
+                speechContent.classList.add('hidden');
+            }
+        }
+
+        // Initialize Lucide icons
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>
