@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects and interactive explorations by Mohammad Saad." />
+  <title>Projects - Mohammad Saad</title>
+  <link rel="icon" href="static/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="static/css/theme.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #fafafa; --surface: #fff; --text: #1a1a1a; --muted: #777; --border: #e4e4e4; --accent: #0055cc; --tag-bg: #f0f0f0; --max: 700px; }
+    body { padding: 3rem 1.5rem 6rem; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.7; }
+    main { max-width: var(--max); margin: 0 auto; }
+    header { margin-bottom: 3rem; }
+    .header-inner { display: flex; align-items: flex-start; gap: 1.25rem; margin-bottom: 1.25rem; }
+    .avatar { width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0; object-fit: cover; }
+    h1 { font-size: 1.6rem; font-weight: 800; letter-spacing: -.5px; }
+    .subtitle { margin-top: .2rem; color: var(--muted); font-size: .88rem; }
+    .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .nav-links a { padding: .3rem .7rem; border-radius: 99px; background: var(--tag-bg); color: var(--accent); font-size: .85rem; font-weight: 500; text-decoration: none; }
+    .nav-links a:hover { background: var(--accent); color: #fff; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .project-list { display: grid; gap: 1rem; list-style: none; }
+    .project-card { display: block; padding: 1.25rem; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); text-decoration: none; }
+    .project-card:hover { border-color: var(--accent); }
+    .project-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    h2 { font-size: 1rem; font-weight: 700; }
+    .arrow { color: var(--accent); }
+    .project-description { margin-top: .4rem; color: #555; font-size: .86rem; }
+    footer { margin-top: 4rem; color: var(--muted); font-size: .78rem; }
+    @media (max-width: 560px) { body { padding: 2rem 1rem 4rem; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="header-inner">
+      <img class="avatar" src="images/profile_pic_bike.jpg" alt="Mohammad Saad" />
+      <div>
+        <h1>Projects</h1>
+        <div class="subtitle">Things I build and explore.</div>
+      </div>
+    </div>
+    <nav class="nav-links" aria-label="Site navigation">
+      <a href="index.html">Home</a>
+      <a href="writing.html">Writing</a>
+      <a href="races.html">Races</a>
+      <a href="index.html#resume">Resume</a>
+    </nav>
+  </header>
+  <!-- Add new projects as additional list items. -->
+  <ul class="project-list">
+    <li>
+      <a class="project-card" href="companions/" aria-labelledby="companions-title">
+        <div class="project-heading">
+          <h2 id="companions-title">Companions</h2>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+        <p class="project-description">Interactive stories, timelines, and lessons from the lives of the companions of Prophet Muhammad ﷺ.</p>
+      </a>
+    </li>
+  </ul>
+  <footer>Built with plain HTML &amp; CSS · Hosted on GitHub Pages</footer>
+</main>
+<script src="static/js/theme-toggle.js"></script>
+</body>
+</html>

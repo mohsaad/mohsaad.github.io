@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the lives of the companions of Prophet Muhammad through interactive reports, timelines, and lessons." />
+  <meta name="theme-color" content="#050914" />
+  <title>Companions - Mohammad Saad</title>
+  <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      background: #050914;
+      background-image: radial-gradient(rgba(16, 185, 129, .08) 1px, transparent 1px);
+      background-size: 24px 24px;
+      color: #e2e8f0;
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 2px solid #fbbf24; outline-offset: 6px; }
+    .container { width: min(100% - 3rem, 1080px); margin-inline: auto; }
+    .site-header { border-bottom: 1px solid #1e293b; background: rgba(15, 23, 42, .85); }
+    .navigation { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: 1.25rem; }
+    .brand { text-decoration: none; font-size: .85rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+    .nav-links a { color: #cbd5e1; font-size: .8rem; text-decoration: none; }
+    .nav-links a:hover { color: #6ee7b7; }
+    .hero { padding: 5.5rem 0 4rem; max-width: 760px; }
+    .eyebrow { margin: 0 0 1.25rem; color: #6ee7b7; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 0 0 1.5rem; color: #f8fafc; font-size: clamp(2.8rem, 7vw, 4.75rem); font-weight: 800; letter-spacing: -.05em; line-height: 1.12; }
+    h1 span { color: #fbbf24; }
+    .intro { max-width: 600px; margin: 0; color: #94a3b8; font-size: 1rem; }
+    .collection-heading { margin: 0 0 1.25rem; color: #cbd5e1; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; }
+    .companion-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr)); gap: 1rem; padding: 0; margin: 0; list-style: none; }
+    .companion-card { height: 100%; }
+    .companion-card a {
+      display: flex; flex-direction: column; height: 100%; padding: 1.25rem;
+      border: 1px solid rgba(16, 185, 129, .25); border-radius: 14px;
+      background: linear-gradient(135deg, rgba(6, 78, 59, .2), transparent 65%), #0f172a;
+      text-decoration: none; transition: border-color .2s, transform .2s;
+    }
+    .companion-card a:hover { border-color: #34d399; transform: translateY(-3px); }
+    .card-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; margin-bottom: .75rem; }
+    .report-type { color: #6ee7b7; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .arabic { color: #fcd34d; font-family: Amiri, serif; font-size: 1.3rem; }
+    h3 { margin: 0 0 .2rem; color: #f8fafc; font-size: 1.2rem; letter-spacing: -.025em; line-height: 1.35; }
+    .honorific { margin: 0 0 .65rem; color: #94a3b8; font-size: .72rem; }
+    .report-title { margin: 0 0 1rem; color: #fcd34d; font-size: .85rem; font-weight: 600; }
+    .card-link { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: auto; padding-top: .75rem; border-top: 1px solid #253348; color: #6ee7b7; font-size: .78rem; font-weight: 700; }
+    .collection-note { margin: 1.5rem 0 0; color: #94a3b8; font-size: .8rem; }
+    footer { margin-top: 5rem; padding-block: 1.75rem; border-top: 1px solid #1e293b; color: #94a3b8; font-size: .75rem; }
+    footer a { text-decoration-color: #475569; text-underline-offset: 4px; }
+    @media (max-width: 560px) {
+      .container { width: calc(100% - 2rem); }
+      .navigation { align-items: flex-start; flex-direction: column; gap: .65rem; }
+      .hero { padding: 3.5rem 0 2.75rem; }
+      footer { margin-top: 3.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .companion-card a { transition: none; }
+      .companion-card a:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container navigation" aria-label="Site navigation">
+      <a class="brand" href="./" aria-current="page">Companions</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../writing.html">Writing</a>
+        <a href="../races.html">Races</a>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">Lives to learn from</p>
+      <h1>The companions.<br /><span>Their stories.</span></h1>
+      <p class="intro">Explore the lives of the companions of Prophet Muhammad ﷺ through interactive reports, timelines, and reflections on the lessons they leave us.</p>
+    </header>
+    <section aria-labelledby="collection-heading">
+      <h2 class="collection-heading" id="collection-heading">Explore the collection</h2>
+      <!-- Add each new companion as another list item using this card structure. -->
+      <ul class="companion-grid">
+        <li>
+          <article class="companion-card">
+            <a href="jafar_ibn_abi_talib_interactive_report.html" aria-labelledby="jafar-name jafar-action">
+              <div class="card-top">
+                <span class="report-type">Interactive report</span>
+                <span class="arabic" lang="ar" dir="rtl">جعفر الطيّار</span>
+              </div>
+              <h3 id="jafar-name">Ja‘far ibn Abi Talib</h3>
+              <p class="honorific">May Allah be pleased with him</p>
+              <p class="report-title">Flying in Paradise</p>
+              <div class="card-link"><span id="jafar-action">Explore his story</span><span aria-hidden="true">↗</span></div>
+            </a>
+          </article>
+        </li>
+      </ul>
+      <p class="collection-note">A growing collection. More companions will be added over time.</p>
+    </section>
+  </main>
+  <footer class="container">Collected by <a href="../index.html">Mohammad Saad</a></footer>
+</body>
+</html>
