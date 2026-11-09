@@ -58,20 +58,11 @@ title: Writing
 
   <p class="intro">Notes and longer-form reflections, migrated from my Notion blog.</p>
 
-  {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% assign writing_entries = site.posts | concat: site.data.writing_links | sort: "date" | reverse %}
+  {% assign posts_by_year = writing_entries | group_by_exp: "post", "post.date | date: '%Y'" %}
   {% for year in posts_by_year %}
   <section class="year-group">
     <h2 class="year-heading">{{ year.name }}</h2>
-    {% if year.name == "2026" %}
-    <article class="post-item">
-      <time class="post-date" datetime="2026-08-23">August</time>
-      <div>
-        <h3 class="post-title"><a href="races/chicago-triathlon-2026.html">Chicago Triathlon Race Report</a></h3>
-        <p class="post-description">A personal-best Olympic triathlon, from race morning through the finish line.</p>
-        <span class="post-category">Endurance</span>
-      </div>
-    </article>
-    {% endif %}
     {% for post in year.items %}
     <article class="post-item">
       <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B" }}</time>
